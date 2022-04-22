@@ -1,0 +1,84 @@
+/**
+* pricing box style 01
+*/
+.sg-pricing {
+    &-action {
+        &-link-2 {
+            height: 60px;
+            border-radius: 12px;
+            background: var(--clr-common-black);
+            display: inline-block;
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--clr-common-white);
+            text-decoration: none;
+            line-height: 60px;
+            padding: 0 48px;
+            &:hover {
+                background-color: var(--clr-theme-primary);
+                color: var(--clr-common-white);
+            }
+        }
+    }
+    &-duration-badge {
+        &-2 {
+            border-top: 1px solid var(--clr-bg-gray-3);
+            padding-top: 18px;
+        }
+        &-text-2 {
+            font-size: 16px;
+            & i {
+                font-size: 10px;
+                display: inline-block;
+                color: var(--clr-body-text);
+                margin-right: 5px;
+            }
+        }
+    }
+    &-title-2 {
+        font-size: 70px;
+        margin-bottom: 0;
+        & sup {
+            font-size: 20px;
+            vertical-align: top;
+            transform: translateY(23px);
+            display: inline-block;
+        }
+        & span {
+            font-size: 20px;
+        }
+    }
+    &-subtitle-2 {
+        font-weight: 500;
+        font-size: 18px;
+        display: block;
+        color: var(--clr-theme-primary);
+        margin-bottom: 20px;
+
+    }
+    &-box {
+        &-head-2 {
+            margin-bottom: 15px;
+        }
+        &-2 {
+            background-color: var(--clr-common-white);
+            padding: 55px 85px;
+            border-radius: 15px;
+        }
+        &-list-2 {
+            border-top: 1px solid var(--clr-bg-gray-3);
+            padding-top: 21px;
+            & li {
+                font-weight: 500;
+                font-size: 16px;
+                list-style: none;
+                color: var(--clr-common-black);
+                margin-bottom: 3px;
+                & span {
+                    font-weight: 400;
+                    color: var(--clr-body-text);
+                }
+            }
+        }
+    }
+}
