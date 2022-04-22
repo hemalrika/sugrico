@@ -1,0 +1,96 @@
+/**
+* cta style 01
+*/
+@use '../abstracts/variables' as *;
+.sg-cta {
+    &-box {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        padding-right: 73px;
+        border-radius: 25px;
+        @media #{$md} {
+            padding: 50px;
+        }
+        @media #{$xs} {
+            padding: 35px 30px;
+        }
+        &.has-transform-reverce-top {
+            margin-top: -100px;
+        }
+        & > * {
+            position: relative;
+            z-index: 3;
+        }
+        &.has-cta-bg-before {
+            position: relative;
+            &::after {
+                position: absolute;
+                right: -41.6%;
+                top: 0;
+                height: 100%;
+                content: "";
+                background-color: var(--clr-theme-primary);
+                width: 42.5%;
+                @media #{$xl} {
+                    right: 0;
+                    border-top-right-radius: 25px;
+                    border-bottom-right-radius: 25px;
+                }
+                @media #{$lg, $md} {
+                    display: none;
+                }
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+        &-title {
+            font-size: 50px;
+            text-align: left;
+            line-height: 1.23;
+            margin-bottom: 0;
+            color: var(--clr-common-white);
+            @media #{$lg} {
+                font-size: 30px;
+            }
+            @media #{$md} {
+                font-size: 40px;
+            }
+            @media #{$xs} {
+                font-size: 24px;
+            }
+            & bdi {
+                &.cta-title {
+                    @media #{$md} {
+                        display: block;
+                    }
+                }
+            }
+            & span {
+                position: relative;
+                display: inline-block;
+                &::after {
+                    position: absolute;
+                    left: calc(100% + 20px);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 120px;
+                    height: 1px;
+                    background-color: var(--clr-common-white);
+                    content: "";
+                    @media #{$lg} {
+                        width: 80px;
+                    }
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.sg-cta-box.has-cta-bg-before {
+    @media #{$lg} {
+        padding: 60px 40px;
+    }
+}

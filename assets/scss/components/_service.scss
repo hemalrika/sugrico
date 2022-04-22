@@ -1,0 +1,155 @@
+/**
+* service style 01
+*/
+@use '../abstracts/variables' as *;
+.sg-service {
+    &-box {
+        &-content {
+            padding: 0 30px;
+            @media #{$lg} {
+                padding: 0 15px;
+            }
+            @media #{$xs} {
+                padding: 70px 30px;
+            }
+            &.has-before-angle {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    left: -12px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    content: "";
+                    background-color: var(--clr-common-white);
+                    height: 21.33px;
+                    width: 12px;
+                    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+                &.rotate-y {
+                    &::after {
+                        transform: translateY(-50%) rotateY(180deg);
+                        left: auto;
+                        right: -12px;
+                    }
+                }
+            }
+        }
+        text-align: center;
+        &-img {
+            height: 320px;
+            @media #{$lg} {
+                height: 250px;
+            }
+            @media #{$xs} {
+                height: 498px;
+            }
+        }
+        &-title {
+            font-size: 24px;
+            margin-bottom: 26px;
+            @media #{$lg} {
+                margin-bottom: 13px;
+            }
+        }
+        &-text {
+            margin-bottom: 32px;
+            @media #{$lg} {
+                margin-bottom: 17px;
+            }
+        }
+    }
+    &-tab {
+        &-controls-2 {
+            & button {
+                width: 100%;
+                height: 90px;
+                border-radius: 15px;
+                background: var(--clr-common-white);
+                border: 0;
+                color: var(--clr-common-black);
+                font-family: $prata;
+                font-size: 24px;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+                &:hover, &.active {
+                    background-color: var(--clr-theme-primary);
+                    color: var(--clr-common-white);
+                }
+                & i {
+                    font-size: 43.92px;
+                    margin-right: 15px;
+                    transform: translateY(5px);
+                    display: inline-block;
+                }
+            }
+        }
+        &-content {
+            &-wrap-2 {
+                padding: 0 40px;
+                padding-right: 45px;
+            }
+            &-price-2 {
+                font-size: 22px;
+                color: var(--clr-common-black);
+                & span {
+                    font-weight: 700;
+                    color: var(--clr-theme-primary);
+                }
+            }
+            &-2 {
+                display: flex;
+                align-items: center;
+                border-radius: 15px;
+                overflow: hidden;
+                background-color: var(--clr-common-white);
+                & .sg-service-tab-content-img-2 {
+                    flex: 0 0 auto;
+                }
+            }
+            &-text-2 {
+                font-size: 16px;
+                line-height: 26px;
+                margin-bottom: 15px;
+            }
+            &-title-2 {
+                font-size: 34px;
+                line-height: 46px;
+                margin-bottom: 20px;
+                & a {
+                    text-decoration: none;
+                    &:hover {
+                        color: var(--clr-theme-primary);
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &-img-2 {
+                max-width: 345px;
+            }
+        }
+    }
+    &-appoint {
+        &-btn-2 {
+            height: 55px;
+            border-radius: 12px;
+            background: transparent;
+            border: 1.5px solid var(--clr-theme-primary);
+            display: inline-block;
+            line-height: 53px;
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--clr-theme-primary);
+            text-decoration: none;
+            padding: 0 40px;
+            &:hover {
+                background-color: var(--clr-common-black);
+                color: var(--clr-common-white);
+                border-color: transparent;
+            }
+        }
+    }
+}

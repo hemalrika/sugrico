@@ -1,0 +1,98 @@
+/**
+* team style 1
+*/
+@use '../abstracts/mixins' as *;
+.sg-team {
+    &-social{
+        &-list {
+            @include transition(.3s);
+            transform: translateY(-50px);
+            & a {
+                color: var(--clr-bg-gray-5);
+                font-size: 15px;
+                margin-right: 16px;
+                display: inline-block;
+                &:hover {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+        &-fix {
+            overflow: hidden;
+            padding-top: 11px;
+            margin-top: -11px;
+            & .sg-team-social-subtitle {
+                @include transition(.3s);
+                transform: translateY(-25px);
+            }
+        }
+        &-subtitle {
+            font-size: 15px;
+            line-height: 25px;
+            display: block;
+            &:hover {
+                color: var(--clr-theme-primary)
+            }
+        }
+    }
+    &-single {
+        &-content {
+            padding: 23px 0;
+        }
+        &-img {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            & img {
+                @include transition(.3s);
+            }
+            &:hover {
+                & img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &-title {
+            font-size: 22px;
+            margin-bottom: 8px;
+            & a {
+                text-decoration: none;
+                &:hover {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+        &-box {
+            &:hover {
+                & .sg-team-social-list {
+                    transform: translateY(0);
+                }
+                & .sg-team-social-subtitle {
+                    transform: translateY(70px);
+                }
+            }
+            & .sg-team-arrow-link {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                & i {
+                    transform: translate(14px, 17px) rotate(-45deg);
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &-arrow-link {
+        & a {
+            background-color: var(--clr-theme-primary);
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            color: var(--clr-common-white);
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            font-size: 14px;
+            text-align: center;
+            line-height: 70px;
+        }
+    }
+}

@@ -1,0 +1,114 @@
+/**
+* Hero Style 01
+*/
+@use '../abstracts/mixins' as *;
+.sg {
+    &-how-work-btn-2 {
+        & .sg-icon-2 {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background: var(--clr-common-white);
+            border: 1px solid var(--clr-theme-primary);
+            display: inline-block;
+            font-size: 12px;
+            text-align: center;
+            line-height: 60px;
+            margin-right: 20px;
+            color: var(--clr-theme-primary);
+            @include transition(.3s);
+        }
+        & .sg-work-text-2 {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 26px;
+            @include transition(.3s);
+            color: var(--clr-common-black);
+        }
+        & .sg-how-work-btn-link-2 {
+            text-decoration: none;
+            &:hover {
+                & .sg-work-text-2 {
+                    color: var(--clr-theme-primary);
+                }
+                & .sg-icon-2 {
+                    background-color: var(--clr-theme-primary);
+                    color: var(--clr-common-white);
+                }
+            }
+        }
+    }
+    &-hero {
+        &-social {
+            &-action-2 {
+                position: absolute;
+                left: -4.9%;
+                top: 50%;
+                transform: translateY(-50%) rotate(-90deg);
+                & a {
+                    font-size: 14px;
+                    color: var(--clr-common-black);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin: 0 14px;
+                }
+            }
+        }
+        &-count {
+            &-box-2 {
+                background: var(--clr-common-white);
+                padding: 43px 30px;
+                padding-bottom: 25px;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    height: 18.94px;
+                    width: 3px;
+                    content: "";
+                    background-color: var(--clr-theme-primary);
+                }
+                &::before {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    width: 18.94px;
+                    height: 3px;
+                    content: "";
+                    background-color: var(--clr-theme-primary);
+                }
+            }
+            &-num-2 {
+                margin-bottom: 0;
+                font-size: 90px;
+            }
+        }
+        &-img-main-2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40.726%;
+            height: 100%;
+        }
+        &-title-2 {
+            font-size: 110px;
+        }
+        &-desc-2 {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        &-sm-img {
+            &-2 {
+                max-width: 479px;
+            }
+            &-has-pos {
+                &-2 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
