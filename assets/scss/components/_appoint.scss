@@ -1,0 +1,146 @@
+/**
+* appoint style 01
+*/
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+.sg {
+    &-appoint {
+        &-form {
+            &-box {
+                &.sg-has-form-space-negative {
+                    margin-top: -45px;
+                    @media #{$xs} {
+                        text-align: center;
+                    }
+                }
+                border-radius: 15px;
+                position: relative;
+                z-index: 9;
+                padding: 40px 39px;
+                background: var(--clr-common-white);
+                box-shadow: 0px 20px 30px rgba(29, 29, 30, 0.07);
+                padding-bottom: 27px;
+                @media #{$xs} {
+                    padding: 30px 28px;
+                }
+                & .sg-appoint-form-btn {
+                    @media #{$lg} {
+                        margin-top: 15px;
+                    }
+                }
+            }
+            &-input-wrap {
+                &.sg-appoint {
+                    &-username {
+                        display: inline-block;
+                        @media #{$xs} {
+                            display: block;
+                        }
+                        & input {
+                            height: 60px;
+                            border: 0;
+                            padding: 0 20px;
+                            width: 300px;
+                            border-radius: 12px;
+                            background: var(--clr-bg-gray);
+                            @include placeholder {
+                                font-size: 15px;
+                                color: var(--clr-bg-gray-4);
+                            }
+                            @media #{$md} {
+                                margin-bottom: 30px;
+                            }
+                            @media #{$xs} {
+                                width: 100%;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                    &-age {
+                        display: inline-block;
+                        @media #{$xs} {
+                            display: block;
+                        }
+                        & input {
+                            width: 190px;
+                            border: 0;
+                            height: 60px;
+                            padding: 0 20px;
+                            border-radius: 12px;
+                            background: var(--clr-bg-gray);
+                            @media #{$lg} {
+                                width: 214px;
+                            }
+                            @media #{$md} {
+                                width: 293px;
+                            }
+                            @media #{$sm} {
+                                margin-bottom: 30px;
+                            }
+                            @media #{$xs} {
+                                width: 100%;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                    &-email {
+                        display: inline-block;
+                        @media #{$xs} {
+                            display: block;
+                        }
+                        & input {
+                            width: 315px;
+                            height: 60px;
+                            padding: 0 20px;
+                            border-radius: 12px;
+                            background: var(--clr-bg-gray);
+                            border: 0;
+                            @media #{$xl} {
+                                width: 256px;
+                            }
+                            @media #{$md} {
+                                width: 301px;
+                            }
+                            @media #{$xs} {
+                                width: 100%;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                    &-btn {
+                        display: inline-block;
+                        @media #{$xs} {
+                            display: block;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &-check-list {
+            &-wrap {
+                text-align: center;
+            }
+            &-single {
+                margin: 0 21px;
+                display: inline-block;
+                & i {
+                    font-size: 15px;
+                    margin-right: 9px;
+                    color: var(--clr-theme-primary);
+                }
+                & span {
+                    font-size: 15px;
+                    line-height: 46px;
+                    text-align: left;
+                    color: var(--clr-body-text);
+                }
+            }
+        }
+    }
+}
+.sg-appoint-form-input-wrap.sg-appoint-btn.ml-10 {
+    @media #{$lg} {
+        margin-left: 0;
+    }
+}

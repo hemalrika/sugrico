@@ -1,0 +1,286 @@
+/**
+* about style 01
+*/
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+.sg-about {
+    &-left {
+        &-box {
+            height: 633px;
+            position: relative;
+            @media #{$xs} {
+                height: auto;
+            }
+        }
+        &-img {
+            border-radius: 15px;
+            position: absolute;
+            & img {
+                border-radius: 15px;
+            }
+            &.img-1 {
+                width: 100%;
+                height: 510px;
+                left: 0;
+                bottom: 0;
+                @media #{$lg} {
+                    width: 290px;
+                }
+                @media #{$xs} {
+                    position: relative;
+                    z-index: 9;
+                    height: auto;
+                    margin-bottom: 30px;
+                    width: 100%;
+                }
+                & img {
+                    object-fit: cover;
+                    object-position: top center;
+                    height: 100%;
+                }
+            }
+            &.img-2 {
+                width: 370px;
+                height: 430px;
+                right: 0;
+                top: 0;
+                @media #{$lg} {
+                    width: 330px;
+                    height: 387px;
+                    right: -16px;
+                }
+                @media #{$xs} {
+                    position: static;
+                    width: 100%;
+                    height: 348px;
+                }
+                & img {
+                    position: relative;
+                    z-index: 3;
+                    @media #{$xs} {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    left: -15px;
+                    right: -15px;
+                    border-radius: 15px;
+                    bottom: -15px;
+                    top: -15px;
+                    background-color: var(--clr-common-white);
+                }
+            }
+        }
+        &-count {
+            &-num {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                @media #{$lg} {
+                    bottom: 93px;
+                }
+                @media #{$md} {
+                    right: 100px;
+                }
+                @media #{$xs} {
+                    position: relative;
+                    margin-top: 100px;
+                }
+                &::after {
+                    position: absolute;
+                    left: -45px;
+                    top: -49px;
+                    height: 4px;
+                    width: 25px;
+                    content: "";
+                    background-color: var(--clr-theme-primary);
+                    @media #{$xl} {
+                        left: -20px;
+                    }
+                    @media #{$lg} {
+                        top: -37px;
+                    }
+                    @media #{$xs} {
+                        left: 0;
+                        top: -42px;
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    left: -45px;
+                    top: -49px;
+                    width: 4px;
+                    height: 25px;
+                    background-color: var(--clr-theme-primary);
+                    content: "";
+                    @media #{$xl} {
+                        left: -22px;
+                    }
+                    @media #{$lg} {
+                        top: -34px;
+                    }
+                    @media #{$xs} {
+                        left: 0;
+                        top: -39px;
+                    }
+                }
+                &-heading {
+                    font-size: 133px;
+                    margin-bottom: 0;
+                    line-height: 1;
+                    @media #{$lg} {
+                        font-size: 104px;
+                    }
+                }
+            }
+        }
+    }
+    &-content {
+        &-right {
+            & p {
+                font-size: 18px;
+                line-height: inherit;
+                color: var(--clr-body-text);
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-author {
+        &-box {
+            display: table;
+        }
+        &-img {
+            float: left;
+            margin-right: 20px;
+            & img {
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+            }
+        }
+        &-content {
+            overflow: hidden;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        &-title {
+            font-size: 22px;
+            margin-bottom: 0;
+            & a {
+                text-decoration: none;
+                &:hover {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+        &-subtitle {
+            font-size: 14px;
+            display: block;
+        }
+    }
+    &-play-text {
+        &-left {
+            &.has-after-border-right {
+                position: relative;
+                @media #{$lg} {
+                    margin-bottom: 20px;
+                }
+                &::after {
+                    width: 1px;
+                    height: 70px;
+                    background-color: var(--clr-bg-gray-3);
+                    content: "";
+                    position: absolute;
+                    right: -15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-paragraph {
+            font-size: 18px;
+            line-height: 28px;
+            color: var(--clr-common-black);
+            margin-bottom: 0;
+            @media #{$md} {
+                margin-bottom: 15px;
+            }
+            & br {
+                @media #{$lg, $md} {
+                    display: none;
+                }
+            }
+        }
+        &-bordered-btn {
+            text-decoration: none;
+            & .sg-icon {
+                width: 55px;
+                margin-right: 13px;
+                height: 55px;
+                border-radius: 50%;
+                background: var(--clr-common-white);
+                border: 1px solid var(--clr-bg-gray-3);
+                text-align: center;
+                line-height: 55px;
+                @include transition(.3s);
+                color: var(--clr-theme-primary);
+                font-size: 12px;
+                display: inline-block;
+            }
+            & span {
+                font-size: 16px;
+                color: var(--clr-common-black);
+                font-weight: 700;
+                display: inline-block;
+                @include transition(.3s);
+            }
+            &:hover {
+                & .sg-icon {
+                    background-color: var(--clr-theme-primary);
+                    color: var(--clr-common-white);
+                    border-color: transparent;
+                }
+                & span {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+        &-right {
+            &.pl-30 {
+                @media #{$md} {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+.sg-about-right-box.pl-70 {
+	@media #{$lg} {
+        padding-left: 55px;
+    }
+    @media #{$xs} {
+        padding-left: 0;
+    }
+}
+.sg-about-play-text-right.pl-30 {
+    @media #{$lg} {
+        padding-left: 0;
+    }
+    @media #{$xs} {
+        padding-left: 0;
+        padding-top: 15px;
+    }
+}
+.sg-about-right-box.pl-70 {
+    @media #{$md} {
+    	padding-left: 0;
+    }
+}

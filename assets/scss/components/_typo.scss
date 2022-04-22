@@ -1,0 +1,142 @@
+@use '../abstracts/variables' as *;
+.body-typography {
+    &-heading {
+        &-title {
+            font-size: 160px;
+            display: inline-block;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            @media #{$xl} {
+                font-size: 130px;
+            }
+            @media #{$lg} {
+                font-size: 110px;
+            }
+            @media #{$md} {
+                font-size: 85px;
+            }
+            @media #{$xs} {
+                font-size: 34px;
+            }
+            @media #{$sm} {
+                font-size: 60px;
+            }
+        }
+    }
+    &-box {
+        &-img {
+            &-1 {
+                position: absolute;
+                left: 115px;
+                z-index: -1;
+                top: -65px;
+                width: 300px;
+                @media #{$xl} {
+                    left: 75px;
+                    top: -45px;
+                    width: 220px;
+                }
+                @media #{$lg} {
+                    left: 75px;
+                    top: -45px;
+                }
+                @media #{$md} {
+                    left: 28px;
+                    top: -45px;
+                    width: 160px;
+                }
+                @media #{$xs} {
+                    position: static;
+                    margin-top: 36px;
+                }
+                @media #{$sm} {
+                    width: 140px;
+                    position: absolute;
+                    margin-top: 0;
+                    top: -60px;
+                    left: 13px;
+                }
+                & img {
+                    @media #{$lg} {
+                        max-width: 200px;
+                    }
+                }
+            }
+            &-2 {
+                width: 154px;
+                position: absolute;
+                right: 55px;
+                top: 77px;
+                z-index: -1;
+                @media #{$sm} {
+                    margin-top: 0;
+                    position: absolute;
+                    right: 10px;
+                    top: 60px;
+                }
+                & img {
+                    max-width: 110px;
+                    @media #{$md} {
+                        max-width: 90px;
+                    }
+                    @media #{$sm} {
+                        max-width: 85px;
+                        margin-top: 0;
+                    }
+                }
+                @media #{$xl} {
+                    right: -11px;
+                    top: 60px;
+                }
+                @media #{$lg} {
+                    right: -13px;
+                    top: 37px;
+                }
+                @media #{$md} {
+                    right: -36px;
+                    top: 37px;
+                }
+                @media #{$xs} {
+                    position: static;
+                    margin-left: auto;
+                    text-align: right;
+                    margin-top: -34px;
+                }
+            }
+        }
+    }
+}
+.sg-typo-play-btn {
+    &.has-sg-typo-btn-pos {
+        position: absolute;
+        right: 141px;
+        bottom: 42px;
+        @media #{$xl} {
+            right: 70px;
+            bottom: 15px;
+        }
+        @media #{$lg} {
+            right: 81px;
+            bottom: 32px;
+        }
+        @media #{$md} {
+            right: 15px;
+            bottom: 6px;
+        }
+        @media #{$xs} {
+            right: auto;
+            bottom: 30px;
+            left: 27px;
+        }
+        @media #{$sm} {
+            left: auto;
+            right: 0;
+            bottom: 54px;
+        }
+    }
+}
+.body-typography-area.pt-195 {
+    @media #{$xs} {
+        padding-top: 130px;
+    }
+}

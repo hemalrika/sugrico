@@ -1,0 +1,130 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+/**
+* portfolio style 1
+*/
+.sg-portfolio {
+    &-single {
+        position: relative;
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background-color: var(--clr-common-black);
+            opacity: 0;
+            visibility: hidden;
+            @include transition(.3s);
+        }
+        &-btn-link {
+            width: 90px;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.2);
+            text-align: center;
+            display:inline-block;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            border-radius: 50%;
+            text-decoration: none;
+            position: relative;
+            z-index: 3;
+            &.has-link-pos {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            & i {
+                color: var(--clr-common-white);
+                font-size: 33px;
+            }
+        }
+        &:hover {
+            &::after {
+                opacity: .4;
+                visibility: visible;
+            }
+            & .sg-portfolio-single-btn-link {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+// portfolio navigation
+.sg-portfolio {
+    &-navs {
+        display: flex;
+        grid-gap: 20px;
+    }
+    &-common-arrow {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        background: transparent;
+        border: 1px solid var(--clr-bg-gray-3);
+        text-align: center;
+        line-height: 60px;
+        @include transition(.3s);
+        font-size: 25px;
+        &:hover {
+            border-color: transparent;
+            background-color: var(--clr-theme-primary);
+            color: var(--clr-common-white);
+        }
+    }
+}
+
+
+/**
+* portfolio style 02
+*/
+
+.sg-portfolio {
+    &-tab {
+        &-action {
+            &-2 {
+                & .nav-link {
+                    font-weight: 500;
+                    font-size: 18px;
+                    background: transparent;
+                    padding: 0;
+                    border: 0;
+                    &:not(:first-child) {
+                        padding-left: 40px;
+                    }
+                    & span {
+                        display: none;
+                    }
+                    &.active {
+                        height: 50px;
+                        border-radius: 10px;
+                        background: var(--clr-common-white);
+                        border: 1px solid var(--clr-theme-primary);
+                        padding: 0 30px;
+                        margin-left: 40px;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: var(--clr-theme-primary);
+                        position: relative;
+                        & span {
+                            position: absolute;
+                            top: -10px;
+                            left: 30px;
+                            outline: 5px solid var(--clr-common-white);
+                            background: var(--clr-common-white);
+                            line-height: 1;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

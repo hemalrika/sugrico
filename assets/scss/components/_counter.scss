@@ -1,0 +1,29 @@
+/**
+* counter style 1
+*/
+@use '../abstracts/variables' as *;
+.sg-counter {
+    &-count {
+        font-size: 70px;
+        margin-bottom: 10px;
+        @media #{$xs} {
+            font-size: 63px;
+        }
+    }
+    &-label {
+        display: block;
+        font-weight: 500;
+        font-size: 18px;
+        @media #{$xs} {
+            font-size: 17px;
+        }
+    }
+}
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+    font-family: inherit;
+}
+.counter-area.pt-410 {
+    @media #{$xs} {
+        padding-top: 120px;
+    }
+}

@@ -1,0 +1,61 @@
+/**
+* slider 01
+*/
+@use '../abstracts/variables' as *;
+.sg-single {
+    &-slider {
+        @media #{$xs} {
+            position: relative;
+        }
+        &::after {
+            @media #{$xs} {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--clr-common-white);
+                opacity: .6;
+                content: "";
+            }
+        }
+        & > * {
+            position: relative;
+            z-index: 3;
+        }
+        &-title {
+            font-size: 110px;
+            margin-bottom: 15px;
+            text-align: left;
+            text-transform: inherit;
+            color: var(--clr-common-black);
+            @media #{$md} {
+                font-size: 80px;
+            }
+            @media #{$xs} {
+                font-size: 55px;
+            }
+        }
+        &-content {
+            font-size: 18px;
+            line-height: 28px;
+            & br {
+                @media #{$md} {
+                    display: none;
+                }
+            }
+        }
+        &-height {
+            min-height: 900px;
+            @media #{$md} {
+                min-height: 765px;
+            }
+            @media #{$xs} {
+                min-height: 700px;
+            }
+        }
+        &-space-1 {
+            margin-top: -51px;
+        }
+    }
+}
