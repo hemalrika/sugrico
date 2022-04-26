@@ -8,9 +8,13 @@ $colors: (
         heading: #1D1D1E,
         text: #777777,
     ),
+    color: (
+        orange: #FCAA04,
+    ),
     theme: (
         primary: #9A4441,
         primary-dark: #A85855,
+        primary-soft: #fff5f5,
     ),
     bg: (
         gray: #F6F6F6,
@@ -19,6 +23,11 @@ $colors: (
         gray-4: #b2b2b2,
         gray-5: #BCBCBC,
         gray-6: #828282,
-        gray-7: #EEEEEE
+        gray-7: #EEEEEE,
+        gray-8: #D5D5D5,
+        gray-9: #b8b8b8,
+        gray-10: #a2a2a2,
+        gray-11: #c1c1c1,
+        gray-12: #F5F5F5
     )
 )

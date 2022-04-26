@@ -1,0 +1,86 @@
+/**
+* doctor grid box 01
+*/
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.sg-doctor {
+    &-grid {
+        &-box {
+            &-link-1-1 {
+                height: 40px;
+                border-radius: 8px;
+                background: transparent;
+                border: 1px solid var(--clr-theme-primary);
+                display: inline-block;
+                text-decoration: none;
+                line-height: 38px;
+                font-weight: 500;
+                padding: 0 22px;
+                font-size: 15px;
+                color: var(--clr-theme-primary);
+                &:hover {
+                    border-color: transparent;
+                    background-color: var(--clr-theme-primary);
+                    color: var(--clr-common-white);
+                }
+            }
+            &-experience-1-1 {
+                display: block;
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+            &-1-1 {
+                border-radius: 15px;
+                background: var(--clr-common-white);
+                border: 1px solid var(--clr-bg-gray-3);
+                padding: 35px 10px;
+                @include transition(.3s);
+                &:hover {
+                    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.08);
+                }
+            }
+            &-img-1-1 {
+                width: 100px;
+                border-radius: 50%;
+                margin: 0 auto;
+                overflow: hidden;
+                padding-bottom: 23px;
+            }
+            &-subtitle-1-1 {
+                font-size: 15px;
+                color: var(--clr-theme-primary);
+                text-decoration: none;
+                display: block;
+                margin-bottom: 2px;
+                &:hover {
+                    color: var(--clr-theme-primary);
+                }
+            }
+            &-title-1-1 {
+                font-family: $dmsans;
+                font-weight: 700;
+                font-size: 22px;
+                margin-bottom: 7px;
+                & a {
+                    text-decoration: none;
+                    &:hover {
+                        color: var(--clr-theme-primary);
+                    }
+                }
+            }
+        }
+        &-rating-1-1 {
+            margin-bottom: 3px;
+            & i {
+                font-size: 14px;
+                color: var(--clr-bg-gray-11);
+                display: inline-block;
+                margin: 0 1px;
+                &.active {
+                    color: var(--clr-color-orange);
+                }
+            }
+        }
+    }
+}
+

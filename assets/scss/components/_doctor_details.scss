@@ -1,0 +1,193 @@
+/**
+* doctor details style 01
+*/
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+.sg-doctor {
+    &-details {
+        &-content-wrap-1-3 {
+            background: var(--clr-common-white);
+            border-radius: 20px;
+            padding: 50px;
+            @media #{$md, $xs} {
+                padding: 50px 0;
+            }
+        }
+        &-schedule-1-3 {
+            & .table-inner {
+                @media #{$xs} {
+                    overflow-x: auto;
+                }
+            }
+            & .table>:not(caption)>*>* {
+                box-shadow: none;
+                border: 0;
+            }
+            & table {
+                @media #{$xs} {
+                    min-width: 400px;
+                }
+                & thead {
+                    & th {
+                        background: var(--clr-bg-gray-12);
+                        font-weight: 700;
+                        font-size: 16px;
+                        color: var(--clr-common-black);
+                        padding: 14px 0;
+                        padding-left: 30px;
+                    }
+                }
+                & tbody {
+                    & tr {
+                        &:nth-child(even) {
+                            background: var(--clr-bg-gray-12);
+                        }
+                        & td {
+                            font-size: 16px;
+                            color: var(--clr-common-black);
+                            padding: 14px 0;
+                            padding-left: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        &-research-1-3 {
+            & p {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+        &-work-experience-1-3 {
+            & ul {
+                & li {
+                    font-size: 16px;
+                    list-style-type: none;
+                    margin-bottom: 5px;
+                    padding-left: 10px;
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        top: 10px;
+                        width: 4px;
+                        height: 4px;
+                        background-color: var(--clr-body-text);
+                        content: "";
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+        &-title-sm-1-3 {
+            font-weight: 700;
+            font-size: 18px;
+            font-family: "DM Sans";
+        }
+        &-about {
+            &-text-1-3 {
+                font-size: 16px;
+                line-height: 26px;
+                margin-bottom: 33px;
+            }
+        }
+        &-title-1-3 {
+            font-size: 50px;
+            margin-bottom: 6px;
+            @media #{$xs} {
+                font-size: 40px;
+            }
+        }
+        &-subtitle-1-3 {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 4px;
+            @media #{$xs} {
+                font-size: 18px;
+            }
+        }
+        &-education-1-3 {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 25px;
+            margin-bottom: 15px;
+            color: var(--clr-common-black);
+        }
+        &-tel-1-3 {
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--clr-common-black);
+            text-decoration: none;
+            & svg {
+                margin-right: 5px;
+                & path {
+                    @include transition(.3s);
+                }
+            }
+            &:hover {
+                color: var(--clr-theme-primary);
+                & svg path {
+                    fill: var(--clr-theme-primary);
+                }
+            }
+        }
+        &-or-1-3 {
+            font-size: 16px;
+            display: block;
+            text-align: center;
+        }
+        &-img-1-3 {
+            border-radius: 10px;
+            border: 15px solid var(--clr-common-white);
+            overflow: hidden;
+            & img {
+                border-radius: 10px;
+            }
+        }
+    }
+}
+.sg {
+    &-experience-item-wrap-1-3 {
+        margin-bottom: 10px;
+        & .title {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--clr-common-black);
+            display: inline-block;
+            width: 137px;
+            position: relative;
+            margin-right: 53px;
+            word-break: break-all;
+            padding-right: 10px;
+            @media #{$xs} {
+                width: 114px;
+                margin-right: 20px;
+            }
+            &::after {
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-weight: 500;
+                font-size: 16px;
+                color: var(--clr-common-black);
+                content: ":";
+            }
+        }
+        & .value {
+            font-size: 16px;
+        }
+    }
+}
+.has-doctor-details-shape-top {
+    position: relative;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1 ;
+        width: 100%;
+        height: 500px;
+        content: "";
+        background-color: var(--clr-bg-gray);
+    }
+}

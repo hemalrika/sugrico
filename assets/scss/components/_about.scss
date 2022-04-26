@@ -284,3 +284,34 @@
     	padding-left: 0;
     }
 }
+
+/**
+* about box style 02 ( inherit from style 01 )
+*/
+
+.sg-about-successfully-solved-box-3 {
+    padding-left: 11px;
+    position: relative;
+    &::before {
+        position: absolute;
+        left: -9px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 70px;
+        background: #ececec;
+        content: "";
+    }
+    & .title {
+        font-size: 60px;
+        float: left;
+        margin-bottom: 0;
+        margin-right: 28px;
+    }
+    & .content {
+        font-size: 18px;
+        line-height: 28px;
+        color: var(--clr-common-black);
+        margin-bottom: 0;
+    }
+}

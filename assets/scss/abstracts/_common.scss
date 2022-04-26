@@ -361,3 +361,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 .pb-335 {
     padding-bottom: 335px;
 }
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    line-height: inherit;
+}

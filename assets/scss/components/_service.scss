@@ -72,6 +72,16 @@
                 color: var(--clr-common-black);
                 font-family: $prata;
                 font-size: 24px;
+                @media #{$lg} {
+                    height: 74px;
+                }
+                @media #{$lg} {
+                    font-size: 18px;
+                }
+                & span {
+                    display: inline-block;
+                    transform: translateY(-6px);
+                  }
                 &:not(:last-child) {
                     margin-bottom: 20px;
                 }
@@ -82,8 +92,10 @@
                 & i {
                     font-size: 43.92px;
                     margin-right: 15px;
-                    transform: translateY(5px);
                     display: inline-block;
+                    @media #{$lg} {
+                        font-size: 37.92px;
+                    }
                 }
             }
         }
@@ -91,6 +103,12 @@
             &-wrap-2 {
                 padding: 0 40px;
                 padding-right: 45px;
+                @media #{$xs} {
+                    padding: 0 32px;
+                    padding-right: 32px;
+                    padding-bottom: 50px;
+                    padding-top: 15px;
+                }
             }
             &-price-2 {
                 font-size: 22px;
@@ -106,6 +124,11 @@
                 border-radius: 15px;
                 overflow: hidden;
                 background-color: var(--clr-common-white);
+                @media #{$xs} {
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    grid-gap: 30px;
+                }
                 & .sg-service-tab-content-img-2 {
                     flex: 0 0 auto;
                 }
@@ -119,6 +142,24 @@
                 font-size: 34px;
                 line-height: 46px;
                 margin-bottom: 20px;
+                @media #{$xl} {
+                    font-size: 30px;
+                    line-height: 1.4;
+                }
+                @media #{$lg} {
+                    font-size: 23px;
+                    line-height: 1.4;
+                    margin-bottom: 14px;
+                }
+                @media #{$md} {
+                    font-size: 29px;
+                    line-height: 1.4;
+                    margin-bottom: 13px;
+                }
+                @media #{$xs} {
+                    font-size: 32px;
+                    line-height: 1.3;
+                }
                 & a {
                     text-decoration: none;
                     &:hover {
@@ -129,6 +170,15 @@
             }
             &-img-2 {
                 max-width: 345px;
+                @media #{$lg} {
+                    max-width: 295px;
+                }
+                @media #{$md} {
+                    max-width: 293px;
+                }
+                @media #{$xs} {
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -149,6 +199,50 @@
                 background-color: var(--clr-common-black);
                 color: var(--clr-common-white);
                 border-color: transparent;
+            }
+        }
+    }
+}
+.sg-service-tab-content-price-2.mb-40 {
+    @media #{$lg, $md} {
+        margin-bottom: 19px;
+    }
+}
+.sg-service-tab-controls-2.mr-20 {
+    @media #{$xs} {
+        margin-right: 0;
+    }
+}
+
+
+/**
+* service box 02
+*/
+.sg-service {
+    &-box {
+        &-content-3 {
+            & .title {
+                font-size: 24px;
+                margin-bottom: 0;
+                & a {
+                    text-decoration: none;
+                    &:hover {
+                        color: var(--clr-theme-primary);
+                    }
+                }
+            }
+        }
+        &-icon-3 {
+            margin-bottom: 50px;
+            width: 80px;
+            display: inline-block;
+            height: 80px;
+            border-radius: 50%;
+            line-height: 80px;
+            background: var(--clr-theme-primary-soft);
+            & i {
+                font-size: 43.92px;
+                color: var(--clr-theme-primary);
             }
         }
     }

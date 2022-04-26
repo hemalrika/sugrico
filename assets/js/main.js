@@ -121,6 +121,37 @@ function sliderActive() {
 			}
 		}
 	});
+	// portfolio active 2 
+	const sgPortfolioActiveTwo = new Swiper(".sg-portfolio-carousel-active", {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		loop: true,
+		grabCursor: true,
+		observer: true,
+		observeParents: true,
+		centeredSlides: true,
+		navigation: {
+			nextEl: ".sg-portfolio-prev-2",
+			prevEl: ".sg-portfolio-next-2",
+			},
+			breakpoints: {
+			0: {
+				slidesPerView: 1,
+				},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1199: {
+				slidesPerView: 3
+			}
+		}
+	});
 	// team active 1 
 	const sgTeamActive = new Swiper(".sg-team-active", {
 		slidesPerView: 4,
@@ -186,7 +217,7 @@ $('.popup-image').magnificPopup({
 $('.popup-video').magnificPopup({
 	type: 'iframe'
 });
-$('.cinkes_free_consultaion_wrapper select, .cinkes_contact_form select').niceSelect();
+$('.has-nice-select').niceSelect();
 // data background
 $("[data-background").each(function(){
 	$(this).css("background-image","url("+$(this).attr("data-background") + ") ")
@@ -218,7 +249,7 @@ $.scrollUp({
 	scrollText: '<i class="icofont icofont-long-arrow-up"></i>', // Text for element
 	activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
 });
-
+// testimonial acitve 1
 var testimonialControl = new Swiper(".sg-testimonial-active-control", {
 	loop: true,
 	spaceBetween: 0,
@@ -237,6 +268,93 @@ var testimonialControlMain = new Swiper(".sg-testimonial-active-main", {
 	thumbs: {
 		swiper: testimonialControl,
 	},
+});
+// testimonial active 2 
+const testimonialActiveTwo = new Swiper(".sg-testimonial-active-2", {
+	slidesPerView: 3,
+	spaceBetween: 30,
+	loop: true,
+	centeredSlides: true,
+	navigation: {
+		nextEl: ".sg-portfolio-prev-2",
+		prevEl: ".sg-portfolio-next-2",
+		},
+		breakpoints: {
+		0: {
+			slidesPerView: 1,
+			centeredSlides: false,
+		},
+		576: {
+			slidesPerView: 1,
+			centeredSlides: false,
+		},
+		768: {
+			slidesPerView: 2,
+			centeredSlides: false,
+		},
+		992: {
+			slidesPerView: 2,
+		},
+		1199: {
+			slidesPerView: 3
+		}
+	}
+});
+// product active 2 
+const productActiveTwo = new Swiper(".sg-product-active-2", {
+	slidesPerView: 4,
+	spaceBetween: 30,
+	loop: true,
+	centeredSlides: false,
+	navigation: {
+		nextEl: ".sg-product-prev-2",
+		prevEl: ".sg-product-next-2",
+		},
+		breakpoints: {
+		0: {
+			slidesPerView: 1,
+			},
+		576: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 3,
+		},
+		1199: {
+			slidesPerView: 4
+		}
+	}
+});
+// instagram active 2 
+const instagramActiveTwo = new Swiper(".instagram-active-2", {
+	slidesPerView: 5,
+	spaceBetween: 0,
+	loop: true,
+	centeredSlides: false,
+	navigation: {
+		nextEl: ".sg-insta-prev-2",
+		prevEl: ".sg-insta-next-2",
+		},
+		breakpoints: {
+		0: {
+			slidesPerView: 1,
+			},
+		576: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 3,
+		},
+		1199: {
+			slidesPerView: 4
+		}
+	}
 });
 // cross 2
 $('.cross2').cross2({
@@ -257,10 +375,6 @@ $('.odometer').appear(function (e) {
 new WOW().init();
 
 sliderActive();
-// active on hover
-$('.sg-time-schedule-box-single-wrap-2').on('mouseenter', function () {
-	$(this).addClass('active').parent().siblings().find('.sg-time-schedule-box-single-wrap-2').removeClass('active');
-});
 
 
 

@@ -2,6 +2,7 @@
 * Hero Style 01
 */
 @use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
 .sg {
     &-how-work-btn-2 {
         & .sg-icon-2 {
@@ -45,6 +46,21 @@
                 left: -4.9%;
                 top: 50%;
                 transform: translateY(-50%) rotate(-90deg);
+                @media #{$lg} {
+                    transform: rotate(0);
+                    bottom: 26px;
+                    top: auto;
+                    left: 24%;
+                }
+                @media #{$xxl} {
+                    left: -6.9%;
+                }
+                @media #{$xl} {
+                    left: -128px;
+                }
+                @media #{$lg, $md, $xs} {
+                    display: none;
+                }
                 & a {
                     font-size: 14px;
                     color: var(--clr-common-black);
@@ -60,6 +76,9 @@
                 padding: 43px 30px;
                 padding-bottom: 25px;
                 position: relative;
+                @media #{$md} {
+                    padding: 31px 25px;
+                }
                 &::after {
                     position: absolute;
                     right: 10px;
@@ -82,6 +101,9 @@
             &-num-2 {
                 margin-bottom: 0;
                 font-size: 90px;
+                @media #{$md} {
+                    font-size: 50px;
+                }
             }
         }
         &-img-main-2 {
@@ -90,9 +112,42 @@
             right: 0;
             width: 40.726%;
             height: 100%;
+            @media #{$xl} {
+                width: 44.7%;
+            }
+            @media #{$lg} {
+                width: 49.726%;
+            }
+            @media #{$md} {
+                position: static;
+                height: 255px;
+                float: right;
+                width: 48%;
+            }
+            @media #{$xs} {
+                position: static;
+                width: calc(100% - 30px);
+                margin: 0 auto;
+                height: 400px;
+                background-size: cover;
+                margin-bottom: 35px;
+                background-repeat: no-repeat;
+            }
         }
         &-title-2 {
             font-size: 110px;
+            @media #{$xl} {
+                font-size: 95px;
+            }
+            @media #{$lg} {
+                font-size: 65px;
+            }
+            @media #{$md} {
+                font-size: 55px;
+            }
+            @media #{$xs} {
+                font-size: 45px;
+            }
         }
         &-desc-2 {
             font-size: 18px;
@@ -101,14 +156,82 @@
         &-sm-img {
             &-2 {
                 max-width: 479px;
+                @media #{$xxxl} {
+                    max-width: 381px;
+                }
+                @media #{$xxl} {
+                    max-width: 285px;
+                }
+                @media #{$xl} {
+                    max-width: 223px;
+                }
+                @media #{$lg} {
+                    max-width: 217px;
+                }
+                @media #{$md} {
+                    max-width: 48%;
+                    position: static;
+                    float: left;
+                }
             }
             &-has-pos {
                 &-2 {
                     position: absolute;
                     left: 0;
                     bottom: 0;
+                    @media #{$md} {
+                        max-width: 48%;
+                        position: static;
+                        height: 255px;
+                        float: left;
+                    }
+                    @media #{$xs} {
+                        position: static;
+                        width: calc(100% - 30px);
+                        margin: 0 auto;
+                        margin-bottom: 30px;
+                    }
                 }
             }
         }
+    }
+}
+.sg-hero-content-bottom-2.pl-200 {
+    @media #{$xl} {
+        padding-left: 0;
+        padding-bottom: 66px;    
+    }
+    @media #{$lg, $md} {
+        padding-left: 0;
+        padding-bottom: 65px;
+    }
+}
+.hero-area.p-rel.pt-180 {
+    @media #{$lg} {
+        padding-top: 80px;
+    }
+    @media #{$md} {
+        padding-top: 120px;
+    }
+}
+.hero-area.p-rel.pb-145 {
+    @media #{$md} {
+        padding-bottom: 35px;
+    }
+}
+.sg-header-space-bottom-2 {
+	@media #{$md} {
+        margin-bottom: 50px;
+    }
+}
+.sg-hero-content-bottom-2.pl-200.pr-150 {
+    @media #{$xs} {
+        padding: 0;
+    }
+}
+.hero-area.p-rel.pb-145.pt-180 {
+    @media #{$xs} {
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 }

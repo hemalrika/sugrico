@@ -1,0 +1,70 @@
+/**
+* doctor list style 01
+*/
+@use '../abstracts/mixins' as *;
+.sg-doctor {
+    &-list-filter {
+        &-search-1-1 {
+            position: relative;
+            & input[type="text"] {
+                width: 100%;
+                height: 60px;
+                border-radius: 12px;
+                background: var(--clr-common-white);
+                border: 1px solid var(--clr-bg-gray-3);
+                padding: 0 20px;
+                font-size: 16px;
+                color: var(--clr-bg-gray-9);
+                @include placeholder {
+                    font-size: 16px;
+                    color: var(--clr-bg-gray-9);
+                }
+            }
+            & input[type="submit"], & button[type="submit"] {
+                padding: 0;
+                border: 0;
+                font-size: 15px;
+                background: transparent;
+                color: var(--clr-bg-gray-9);
+                position: absolute;
+                @include transition(.3s);
+                right: 0;
+                top: 0;
+                bottom: 0;
+                padding: 0 20px;
+                &:hover {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+    }
+}
+.has-select-style {
+    float: none;
+    height: 60px;
+    border-radius: 12px;
+    line-height: 58px;
+    &:focus {
+        border-color: var(--clr-bg-gray-3);
+    }
+    & .current {
+        font-size: 16px;
+        color: var(--clr-body-text);
+    }
+    &::after {
+        display: none;
+    }
+    &::before {
+        position: absolute;
+        right: 19px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "\f0d7";
+        font-family: "Font awesome 5 pro";
+        color: var(--clr-bg-gray-10);
+        font-weight: 700;
+    }
+    & .list {
+        width: 100%;
+    }
+}

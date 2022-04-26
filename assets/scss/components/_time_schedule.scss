@@ -6,6 +6,21 @@
 .sg {
     &-time {
         &-schedule {
+            &-box-2 {
+                @media #{$xl, $lg, $md, $xs} {
+                    overflow-x: auto;
+                }
+                & table tbody tr td {
+                    padding: 0 3.5px;
+                    padding-bottom: 10px;
+                    &:last-child {
+                        & .sg-time-schedule-box-modal-2 {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+            }
             &-duration-2 {
                 font-size: 14px;
                 display: block;
@@ -27,8 +42,11 @@
                 background-color: var(--clr-theme-primary);
                 height: 90px;
                 line-height: 90px;
+                margin: 0 1.6px;
                 border-radius: 10px;
-                padding: 0 10px;
+                min-width: 162px;
+                padding: 0 33px;
+                margin-bottom: 10px;
             }
             &-box {
                 &-single {

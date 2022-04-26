@@ -1,6 +1,7 @@
 /**
 * pricing box style 01
 */
+@use '../abstracts/variables'  as *;
 .sg-pricing {
     &-action {
         &-link-2 {
@@ -64,6 +65,18 @@
             background-color: var(--clr-common-white);
             padding: 55px 85px;
             border-radius: 15px;
+            @media #{$xl} {
+                padding: 55px 45px;
+            }
+            @media #{$md} {
+                padding: 50px 37px;
+            }
+            @media #{$xs} {
+                padding: 47px 27px;
+            }
+            @media #{$sm} {
+                padding: 67px 67px;
+            }
         }
         &-list-2 {
             border-top: 1px solid var(--clr-bg-gray-3);

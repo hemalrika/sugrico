@@ -1,0 +1,141 @@
+/**
+* product style 1
+*/
+@use '../abstracts/mixins' as *;
+.sg-product {
+    &-badge {
+        &-pos-2 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+        &-text {
+            &-2 {
+                background-color: rgb(154, 68, 65);
+                font-weight: 500;
+                font-size: 12px;
+                color: var(--clr-common-white);
+                height: 25px;
+                display: inline-block;
+                line-height: 25px;
+                padding: 0 15px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &-box {
+        &-price {
+            &-wrap-2 {
+                & .sg-product-box-price-current-2 {
+                    margin-right: 5px;
+                }
+                & .sg-product-box-price-old-2 {
+                    margin-left: 5px;
+                }
+            }
+            &-current-2 {
+                font-weight: 700;
+                font-size: 16px;
+                color: var(--clr-common-black);
+                display: inline-block;
+            }
+            &-old-2 {
+                font-weight: 500;
+                font-size: 16px;
+                display: inline-block;
+            }
+        }
+        &-title-2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            & a {
+                text-decoration: none;
+                &:hover {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+        &-rating-2 {
+            & i {
+                font-size: 13px;
+                display: inline-block;
+                color: var(--clr-bg-gray-8);
+                &.active {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+        &-2 {
+            position: relative;
+        }
+        &-cart {
+            &-pos-2 {
+                position: absolute;
+                left: 0;
+                @include transition(.3s);
+                bottom: 40px;
+                right: 0;
+                text-align: center;
+                z-index: 2;
+            }
+            &-2 {
+                opacity: 0;
+                @include transition(.3s);
+                visibility: hidden;
+                & a {
+                    height: 45px;
+                    border-radius: 10px;
+                    background: transparent;
+                    border: 1.5px solid var(--clr-common-white);
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: var(--clr-common-white);
+                    line-height: 41px;
+                    display: inline-block;
+                    padding: 0 30px;
+                    text-decoration: none;
+                    &:hover {
+                        border-color: transparent;
+                        background-color: var(--clr-common-white);
+                        color: var(--clr-theme-primary);
+                    }
+                }
+            }
+        }
+        &-img {
+            &-2 {
+                position: relative;
+                background-color: var(--clr-bg-gray-8);
+                &::after {
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    position: absolute;
+                    height: 100%;
+                    background-color: var(--clr-common-black);
+                    content: "";
+                    @include transition(.3s);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                & img {
+                    max-height: 370px;
+                }
+                &:hover {
+                    &::after {
+                        opacity: .5;
+                        visibility: visible;
+                    }
+                    & .sg-product-box-cart-2 {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    & .sg-product-box-cart-pos-2 {
+                        bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
