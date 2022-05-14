@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="assets/css/cross2.min.css">
     <link rel="stylesheet" href="assets/css/meanmenu.css">
     <link rel="stylesheet" href="assets/css/swipper.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
     <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/datepicker.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
@@ -70,9 +72,15 @@
                 </div>
                 <div class="col-xxl-5 col-xl-5 d-none d-xl-block">
                     <div class="sg-header-nav-2 pl-15">
-                        <nav>
+                        <nav  id="mobile-menu-2">
                             <ul>
-                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Home</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Home layout 01</a></li>
+                                        <li><a href="#">Home layout 02</a></li>
+                                        <li><a href="#">Home layout 03</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">Service</a></li>
                                 <li><a href="#">Pages</a></li>
                                 <li><a href="#">News</a></li>
@@ -83,10 +91,11 @@
                 </div>
                 <div class="col-xxl-4 col-xl-5 col-lg-9 col-md-8 col-6">
                     <div class="sg-header-action-links ml-35 text-end d-block">
-                        <a href="#"><i class="fal fa-search"></i></a>
+                        <a href="#0" class="header-search-toogle-btn"><i class="fal fa-search"></i></a>
                         <a href="#" class="d-none d-md-inline-block"><i class="fal fa-shopping-bag"></i></a>
                         <a href="#" class="d-none d-md-inline-block sg-header-theme-btn-2 no-after">Get Appointment </a>
-                        <button class="ml-35 sg-header-sidebar-action-btn"><i class="fal fa-bars"></i></button>
+                        <button class="ml-35 sg-header-sidebar-action-btn d-none d-sm-inline-block"><i class="fas fa-video"></i></button>
+                        <button class="sg-header-sidebar-action-btn-bar d-xl-none ml-10"><i class="fal fa-bars"></i></button>
                     </div>
                 </div>
             </div>
@@ -123,7 +132,7 @@
                         </div>
                     </div>
                     <div class="col-xxl-6 col-xxl-6 col-lg-6">
-                        <div class="sg-about-right-box pl-100">
+                        <div class="sg-about-right-box has-about-space-1 pl-100">
                             <div class="sg-section-title-wrap">
                                 <span class="sg-section-subtitle">About us</span>
                                 <h3 class="sg-section-title  mb-25">Welcome to leading
@@ -146,8 +155,8 @@
                             <hr class="mb-50">
                             <div class="sg-about-play-text-wrap">
                                 <div class="row">
-                                    <div class="col-xxl-5">
-                                        <div class="sg-about-play-text-right">
+                                    <div class="col-xxl-5 col-xl-5 col-md-5">
+                                        <div class="sg-about-play-text-right sg-has-about-play-space-3">
                                             <a href="#" class="sg-about-play-text-bordered-btn">
                                                 <div class="sg-icon">
                                                     <i class="fas fa-play"></i>
@@ -156,7 +165,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-xxl-7">
+                                    <div class="col-xxl-7 col-xl-7 col-md-7">
                                         <div class="sg-about-successfully-solved-box-3">
                                             <h3 class="title">3k</h3>
                                             <p class="content">Surgery cases
@@ -172,11 +181,19 @@
         </div>
         <!-- about area end -->
         <!-- service area start -->
-        <div class="service-area">
+        <div class="service-area pt-125 pb-100" data-bg-color="#F6F6F6">
             <div class="container">
                 <div class="row">
-                    <div class="col-xxl-4">
-                        <div class="sg-service-box-3 text-center">
+                    <div class="col-xxl-12">
+                        <div class="sg-section-title-wrap pb-30 text-center">
+                            <span class="sg-section-subtitle">Services</span>
+                            <h3 class="sg-section-title  mb-25">Our Services</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                        <div class="sg-service-box-3 mb-30 text-center">
                             <div class="sg-service-box-icon-3">
                                 <i class="flaticon flaticon-breast-reconstruction"></i>
                             </div>
@@ -188,11 +205,300 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                        <div class="sg-service-box-3 mb-30 text-center">
+                            <div class="sg-service-box-icon-3">
+                                <i class="flaticon flaticon-liposuction"></i>
+                            </div>
+                            <div class="sg-service-box-content-3">
+                                <h4 class="title"><a href="#">Liposuction</a></h4>
+                                <p class="content">Advance breast implant centers in San Diego, are industry</p>
+                                <a href="#" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                        <div class="sg-service-box-3 mb-30 text-center">
+                            <div class="sg-service-box-icon-3">
+                                <i class="flaticon flaticon-botox"></i>
+                            </div>
+                            <div class="sg-service-box-content-3">
+                                <h4 class="title"><a href="#">Skin Surgery</a></h4>
+                                <p class="content">Skin Changes After Cosmetic Surgery Skin grafts often used</p>
+                                <a href="#" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- service area end -->
-
+        <!-- features area start -->
+        <div class="features-area pt-120 pb-125">
+            <div class="container">
+                <div class="row mb-40">
+                    <div class="col-xxl-12">
+                        <div class="sg-section-title-wrap text-center">
+                            <span class="sg-section-subtitle">Features</span>
+                            <h3 class="sg-section-title">Why Choose Us</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg-service-tab-content-box-2">
+                    <div class="row justify-content-center">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-9 mb-50 mb-lg-0">
+                            <div class="sg-service-tab-controls-2 pr-20">
+                                <nav>
+                                    <div class="nav" id="nav-tab" role="tablist">
+                                        <button class="active" id="nav-tab-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-tab1" type="button" role="tab" aria-controls="nav-tab"
+                                            aria-selected="true"><i class="flaticon flaticon-breast-reconstruction"></i>
+                                            <span>Breast Implants</span></button>
+                                        <button class="" id="nav-tab2-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-tab2" type="button" role="tab" aria-controls="nav-tab"
+                                            aria-selected="false"><i class="flaticon flaticon-liposuction"></i>
+                                            <span>Liposuction</span></button>
+                                        <button class="" id="nav-tab3-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-tab3" type="button" role="tab" aria-controls="nav-tab"
+                                            aria-selected="false"><i class="flaticon flaticon-lip"></i>
+                                            <span>Intervention</span></button>
+                                        <button class="" id="nav-tab4-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-tab4" type="button" role="tab" aria-controls="nav-tab"
+                                            aria-selected="false"><i class="flaticon flaticon-botox"></i>
+                                            <span>Skin Surgery</span></button>
+                                        <button class="" id="nav-tab5-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-tab5" type="button" role="tab" aria-controls="nav-tab"
+                                            aria-selected="false"><i class="flaticon flaticon-liposuction"></i>
+                                            <span>Breast Implants</span></button>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xxl-8 col-xl-8 col-lg-8">
+                            <div class="tab-content pl-10" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-tab1" role="tabpanel"
+                                    aria-labelledby="nav-tab1-tab">
+                                    <div class="sg-service-tab-content-2" data-bg-color="#F6F6F6">
+                                        <div class="sg-service-tab-content-img-2">
+                                            <img src="assets/img/service/service-2-1.jpg" alt="">
+                                            <a href="#" class="sg-service-tab-content-icon-3 has-service-tab-play-pos-3">
+                                               <i class="fas fa-play"></i> 
+                                            </a>
+                                        </div>
+                                        <div class="sg-service-tab-content-wrap-2 sh-has-service-content-space-1">
+                                            <h4 class="sg-service-tab-content-title-2"><a href="#">Facts that you know
+                                                    breast implant</a></h4>
+                                            <p class="sg-service-tab-content-text-2">
+                                                Breast implantation many women over world retain their youth
+                                            </p>
+                                            <div class="sg-service-tab-content-price-2 mb-40">
+                                                From <span>$670</span>
+                                            </div>
+                                            <a href="#" class="sg-service-appoint-btn-2">Appointment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-tab2" role="tabpanel" aria-labelledby="nav-tab2-tab">
+                                    <div class="sg-service-tab-content-2" data-bg-color="#F6F6F6">
+                                        <div class="sg-service-tab-content-img-2">
+                                            <img src="assets/img/service/service-2-1.jpg" alt="">
+                                        </div>
+                                        <div class="sg-service-tab-content-wrap-2 sh-has-service-content-space-1">
+                                            <h4 class="sg-service-tab-content-title-2"><a href="#">Facts that you know
+                                                    breast implant</a></h4>
+                                            <p class="sg-service-tab-content-text-2">
+                                                Breast implantation many women over world retain their youth
+                                            </p>
+                                            <div class="sg-service-tab-content-price-2 mb-40">
+                                                From <span>$670</span>
+                                            </div>
+                                            <a href="#" class="sg-service-appoint-btn-2">Appointment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-tab3" role="tabpanel" aria-labelledby="nav-tab3-tab">
+                                    <div class="sg-service-tab-content-2" data-bg-color="#F6F6F6">
+                                        <div class="sg-service-tab-content-img-2">
+                                            <img src="assets/img/service/service-2-1.jpg" alt="">
+                                        </div>
+                                        <div class="sg-service-tab-content-wrap-2 sh-has-service-content-space-1">
+                                            <h4 class="sg-service-tab-content-title-2"><a href="#">Facts that you know
+                                                    breast implant</a></h4>
+                                            <p class="sg-service-tab-content-text-2">
+                                                Breast implantation many women over world retain their youth
+                                            </p>
+                                            <div class="sg-service-tab-content-price-2 mb-40">
+                                                From <span>$670</span>
+                                            </div>
+                                            <a href="#" class="sg-service-appoint-btn-2">Appointment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-tab4" role="tabpanel" aria-labelledby="nav-tab4-tab">
+                                    <div class="sg-service-tab-content-2" data-bg-color="#F6F6F6">
+                                        <div class="sg-service-tab-content-img-2">
+                                            <img src="assets/img/service/service-2-1.jpg" alt="">
+                                        </div>
+                                        <div class="sg-service-tab-content-wrap-2 sh-has-service-content-space-1">
+                                            <h4 class="sg-service-tab-content-title-2"><a href="#">Facts that you know
+                                                    breast implant</a></h4>
+                                            <p class="sg-service-tab-content-text-2">
+                                                Breast implantation many women over world retain their youth
+                                            </p>
+                                            <div class="sg-service-tab-content-price-2 mb-40">
+                                                From <span>$670</span>
+                                            </div>
+                                            <a href="#" class="sg-service-appoint-btn-2">Appointment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-tab5" role="tabpanel" aria-labelledby="nav-tab5-tab">
+                                    <div class="sg-service-tab-content-2" data-bg-color="#F6F6F6">
+                                        <div class="sg-service-tab-content-img-2">
+                                            <img src="assets/img/service/service-2-1.jpg" alt="">
+                                        </div>
+                                        <div class="sg-service-tab-content-wrap-2 sh-has-service-content-space-1">
+                                            <h4 class="sg-service-tab-content-title-2"><a href="#">Facts that you know
+                                                    breast implant</a></h4>
+                                            <p class="sg-service-tab-content-text-2">
+                                                Breast implantation many women over world retain their youth
+                                            </p>
+                                            <div class="sg-service-tab-content-price-2 mb-40">
+                                                From <span>$670</span>
+                                            </div>
+                                            <a href="#" class="sg-service-appoint-btn-2">Appointment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- features area end -->
+        <!-- cta area start -->
+        <div class="cta-area pt-65 pb-55 theme-bg">
+            <div class="cta-style-about">
+                <div class="container">
+                    <div class="sg-cta-box">
+                        <div class="row align-items-center">
+                            <div class="col-xxl-8 col-xl-8 col-lg-8">
+                                 <div class="sg-cta-box-left mb-20 mb-lg-0">
+                                     <h4 class="sg-cta-box-title"><bdi class="cta-title d-block">Contact Emergency</bdi> 
+                                     <span>Helpline</span></h4>
+                                 </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4">
+                                 <div class="sg-cta-box-right text-lg-end">
+                                     <a href="#" class="sg-white-rounded-btn">Contact Us</a>
+                                 </div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cta area end -->
+        <!-- brand area start -->
+        <div class="brand-area bg-default pt-120 pb-120">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xxl-5 col-xl-5 col-lg-5">
+                         <div class="sg-section-title-wrap mb-30 mb-lg-0">
+                             <span class="sg-section-subtitle">Our Partners</span>
+                             <h3 class="sg-section-title mb-0">Honorable global 
+                                 partners</h3>
+                         </div>
+                    </div>
+                    <div class="col-xxl-7 col-xl-7 col-lg-7">
+                        <div class="pl-70 sg-brand-left-space">
+                             <div class="sg-brand-active swiper-container">
+                                 <div class="swiper-wrapper">
+                                     <div class="swiper-slide">
+                                         <div class="sg-brand-img">
+                                         <img src="assets/img/brand/brand-1.png" alt="brand image not found">
+                                         </div>
+                                     </div>
+                                     <div class="swiper-slide">
+                                         <div class="sg-brand-img">
+                                             <img src="assets/img/brand/brand-2.png" alt="brand image not found">
+                                         </div>
+                                     </div>
+                                     <div class="swiper-slide">
+                                         <div class="sg-brand-img">
+                                             <img src="assets/img/brand/brand-3.png" alt="brand image not found">
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- brand area end -->
+        <!-- popup area start -->
+        <div class="bg-overlay"></div>
+        <div class="sg-video-call-popup">
+            <div class="cross-btn">
+                <button><i class="fal fa-times"></i></button>
+            </div>
+            <div class="container">
+                <div class="sg-appoint-form">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-xxl-12 mb-30">
+                                <input type="text" name="name" id="name" placeholder="Name">
+                            </div>
+                            <div class="col-xxl-12 mb-30">
+                                <input type="email" name="email" id="email" placeholder="Email">
+                            </div>
+                            <div class="col-xxl-12 mb-30">
+                                <input type="text" name="phone" id="phone" placeholder="Phone">
+                            </div>
+                            <div class="col-xxl-12 mb-30">
+                                <input type="text" name="patiend_id" id="patiend_id" placeholder="Patient ID">
+                            </div>
+                            <div class="col-xxl-12 mb-30">
+                                <div class="text-center"><button type="submit" class="sg-header-theme-btn-2">Go Online Live</button></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+       <div class="popup-area">
+           <div class="sg-sidebar-menu-popup-1">
+               <div class="sg-sidebar-menu-cross mb-40">
+                   <button>
+                       <i class="fal fa-times"></i>
+                       <span>CLOSE</span>
+                   </button>
+               </div>
+               <div class="sg-sidebar-menu-body-1">
+                   <div class="sg-sidebar-menu-l">
+                       <a href="#"><img src="assets/img/logo/logo-2.png" alt=""></a>
+                   </div>
+                   <div class="mobile-menu-2"></div>
+                   <hr class="mb-70">
+                   <div class="sg-sidebar-menu-contact-widget mb-50">
+                       <h5 class="title">Contact Us</h5>
+                       <ul>
+                           <li><i class="fal fa-phone"></i> <a href="tel:987-098-098-09">987-098-098-09</a>,   <a href="tel:898-352-003-05">898-352-003-05</a></li>
+                       </ul>
+                       <ul>
+                           <li><i class="fal fa-envelope"></i></i> <a href="mailto:info@example.com">info@example.com</a></li>
+                           <li><i class="fal fa-map-marker-alt"></i> <a href="mailto:info@example.com">Domal Brock, New York, USA</a></li>
+                       </ul>
+                   </div>
+                   <div class="text-center">
+                        <button type="submit" class="sg-header-theme-btn-2">Get Appointment </button>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <!-- popup area end -->
     </main>
 
 
@@ -292,6 +598,8 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/appear.min.js"></script>
+    <script src="assets/js/datepicker.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
     <script src="assets/js/cross2.min.js"></script>
     <script src="assets/js/back-to-top.min.js"></script>
     <script src="assets/js/main.js"></script>

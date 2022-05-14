@@ -1,8 +1,13 @@
+@use '../abstracts/variables' as *;
 .sg-breadcrumb {
     &-title {
         font-size: 80px;
         color: var(--clr-common-white);
         margin-bottom: 24px;
+        @media #{$xs} {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
     }
     &-list {
         & a,& span {

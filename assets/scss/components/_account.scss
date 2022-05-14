@@ -1,0 +1,51 @@
+/**
+* account
+*/
+@use '../abstracts/variables' as *;
+// sign in
+.sign-in-area, .sign-up-area {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    @media #{$lg, $md, $xs} {
+        padding: 30px 0;
+    }
+}
+.sg-signin-img-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 44.4%;
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    @media #{$lg, $md, $xs} {
+        width: 100%;
+        z-index: -1;
+    }
+}
+.sg-account-wrap-6 {
+	@media #{$lg, $md} {
+        background: var(--clr-common-white);
+        padding: 40px 30px;
+    }
+    @media #{$xs} {
+        background: var(--clr-common-white);
+        padding: 40px 18px;
+    }
+}
+.wrap.has-arrow:after {
+    position: absolute;
+    right: 30px;
+    top: 27px;
+    width: 11px;
+    height: 10px;
+    background: #DBDBDB;
+    content: "";
+    display: block;
+    z-index: 33;
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+}

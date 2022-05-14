@@ -2,6 +2,7 @@
 * service style 01
 */
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 .sg-service {
     &-box {
         &-content {
@@ -62,6 +63,18 @@
         }
     }
     &-tab {
+        &-content {
+            &-icon-3 {
+                width: 62px;
+                height: 62px;
+                background: var(--clr-common-white);
+                display: inline-block;
+                text-align: center;
+                line-height: 62px;
+                border-radius: 50%;
+                color: var(--clr-theme-primary);
+            }
+        }
         &-controls-2 {
             & button {
                 width: 100%;
@@ -72,6 +85,14 @@
                 color: var(--clr-common-black);
                 font-family: $prata;
                 font-size: 24px;
+                padding: 0 30px;
+                text-align: left;
+                @media #{$xs} {
+                    font-size: 19px;
+                }
+                &.bg-theme {
+                    background-color: var(--clr-bg-gray-3);
+                }
                 @media #{$lg} {
                     height: 74px;
                 }
@@ -80,7 +101,7 @@
                 }
                 & span {
                     display: inline-block;
-                    transform: translateY(-6px);
+                    transform: translateY(-13px);
                   }
                 &:not(:last-child) {
                     margin-bottom: 20px;
@@ -93,16 +114,23 @@
                     font-size: 43.92px;
                     margin-right: 15px;
                     display: inline-block;
+                    line-height: 2.0;
                     @media #{$lg} {
                         font-size: 37.92px;
                     }
                 }
             }
+
         }
         &-content {
             &-wrap-2 {
                 padding: 0 40px;
                 padding-right: 45px;
+                &.sh-has-service-content-space-1 {
+                    @media #{$lg} {
+                        padding: 0 30px;
+                    }
+                }
                 @media #{$xs} {
                     padding: 0 32px;
                     padding-right: 32px;
@@ -131,6 +159,7 @@
                 }
                 & .sg-service-tab-content-img-2 {
                     flex: 0 0 auto;
+                    position: relative;
                 }
             }
             &-text-2 {
@@ -139,7 +168,7 @@
                 margin-bottom: 15px;
             }
             &-title-2 {
-                font-size: 34px;
+                font-size: 33px;
                 line-height: 46px;
                 margin-bottom: 20px;
                 @media #{$xl} {
@@ -157,7 +186,7 @@
                     margin-bottom: 13px;
                 }
                 @media #{$xs} {
-                    font-size: 32px;
+                    font-size: 31px;
                     line-height: 1.3;
                 }
                 & a {
@@ -220,16 +249,37 @@
 */
 .sg-service {
     &-box {
+        &-3 {
+            border-radius: 15px;
+            background: var(--clr-common-white);
+            @include transition(.3s);
+            padding: 60px 43px;
+            &:hover {
+                box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.08);
+            }
+            &.sg-service-box-style-border {
+                border: 1px solid var(--clr-bg-gray-3);
+                &:hover {
+                    border-color: var(--clr-theme-primary);
+                    box-shadow: none;
+                }
+            }
+        }
         &-content-3 {
             & .title {
                 font-size: 24px;
-                margin-bottom: 0;
+                margin-bottom: 28px;
                 & a {
                     text-decoration: none;
                     &:hover {
                         color: var(--clr-theme-primary);
                     }
                 }
+            }
+            & .content {
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 40px;
             }
         }
         &-icon-3 {
@@ -246,4 +296,45 @@
             }
         }
     }
+}
+.read-more-btn {
+    height: 40px;
+    border-radius: 8px;
+    background: var(--clr-common-white);
+    border: 1px solid var(--clr-theme-primary);
+    text-decoration: none;
+    color: var(--clr-theme-primary);
+    display: inline-block;
+    line-height: 38px;
+    padding: 0 30px;
+    font-weight: 500;
+    font-size: 15px;
+    &:hover {
+        background-color: var(--clr-theme-primary);
+        color: var(--clr-common-white);
+    }
+}
+.sg-service-tab-controls-2 {
+    max-height: 424px;
+    overflow-y: auto;
+    @media #{$lg} {
+        max-height: 376px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #FFF5F5;
+        border-radius: 3px;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--clr-theme-primary); 
+        border-radius: 3px;
+      }
+}
+.has-service-tab-play-pos-3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

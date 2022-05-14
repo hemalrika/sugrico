@@ -292,6 +292,9 @@
 .sg-about-successfully-solved-box-3 {
     padding-left: 11px;
     position: relative;
+    @media #{$lg} {
+        padding-left: 0;
+    }
     &::before {
         position: absolute;
         left: -9px;
@@ -301,6 +304,13 @@
         height: 70px;
         background: #ececec;
         content: "";
+        @media #{$lg} {
+            display: none;
+        }
+        @media #{$md} {
+            left: -57px;
+            top: 29px;
+        }
     }
     & .title {
         font-size: 60px;
@@ -313,5 +323,33 @@
         line-height: 28px;
         color: var(--clr-common-black);
         margin-bottom: 0;
+        @media #{$lg} {
+            overflow: hidden;
+            padding-right: 40px;
+        }
+        @media #{$md} {
+            padding-right: 20px;
+        }
+    }
+}
+.sg-about-right-box.pl-100.has-about-space-1 {
+    @media #{$xl} {
+        padding-left: 70px;
+    }
+    @media #{$lg} {
+        padding-left: 50px;
+    }
+    @media #{$md, $xs} {
+        padding-left: 0;
+    }
+}
+.sg-has-about-play-space-3 {
+    @media #{$lg, $xs} {
+        margin-bottom: 30px;
+    }
+}
+.sg-about-left-img-3 {
+    @media #{$md, $xs} {
+        margin-bottom: 50px;
     }
 }

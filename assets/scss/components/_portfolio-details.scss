@@ -1,0 +1,32 @@
+/**
+* portfolio details
+*/
+.sg-portfolio {
+    &-details {
+        &-content {
+            & .title {
+                font-size: 34px;
+                margin-bottom: 22px;
+            }
+            & p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+        &-img {
+            &-label {
+                font-size: 12px;
+                display: block;
+                font-style: italic;
+            }
+            & img {
+                border-radius: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+.sg-image-radius {
+    border-radius: 15px;
+    overflow: hidden;
+}

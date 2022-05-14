@@ -16,11 +16,14 @@
         <link rel="stylesheet" href="assets/css/animate.min.css">
         <link rel="stylesheet" href="assets/css/magnific-popup.css">
         <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
         <link rel="stylesheet" href="assets/css/nice-select.css">
         <link rel="stylesheet" href="assets/css/cross2.min.css">
         <link rel="stylesheet" href="assets/css/meanmenu.css">
         <link rel="stylesheet" href="assets/css/swipper.css">
+        <link rel="stylesheet" href="assets/css/select2.min.css">
         <link rel="stylesheet" href="assets/css/admin.css">
+        <link rel="stylesheet" href="assets/css/datepicker.css">
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
     
@@ -73,9 +76,15 @@
                            <div class="col-xxl-9 col-xl-9 col-lg-9 d-none d-lg-block">
                                <div class="sg-header-nav-actions text-end">
                                    <div class="sg-header-nav-main">
-                                       <nav>
+                                       <nav id="mobile-menu">
                                            <ul>
-                                               <li><a href="#">Home</a></li>
+                                               <li><a href="#">Home</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Home layout 01</a></li>
+                                                    <li><a href="#">Home layout 02</a></li>
+                                                    <li><a href="#">Home layout 03</a></li>
+                                                </ul>
+                                            </li>
                                                <li><a href="#">Service</a></li>
                                                <li><a href="#">Pages</a></li>
                                                <li><a href="#">News</a></li>
@@ -84,15 +93,15 @@
                                        </nav>
                                    </div>
                                    <div class="sg-header-action-links ml-35">
-                                       <a href="#"><i class="fal fa-search"></i></a>
+                                       <a href="#" class="header-search-toogle-btn"><i class="fal fa-search"></i></a>
                                        <a href="#"><i class="fal fa-shopping-bag"></i></a>
-                                       <button class="ml-35 sg-header-sidebar-action-btn"><i class="fal fa-bars"></i></button>
+                                       <button class="ml-35 sg-header-sidebar-action-btn"><i class="fas fa-video"></i></button>
                                    </div>
                                </div>
                            </div>
                            <div class="col-md-6  col-6 d-lg-none">
                                <div class="sg-header-action-links text-end d-block">
-                                   <button class="sg-header-sidebar-action-btn"><i class="fal fa-bars"></i></button>
+                                   <button class="sg-header-sidebar-action-btn-bar"><i class="fal fa-bars"></i></button>
                                </div>
                            </div>
                        </div>
@@ -783,6 +792,75 @@
                </div>
            </div>
            <!-- news area end -->
+           <!-- popup area start -->
+           <div class="bg-overlay"></div>
+            <div class="sg-video-call-popup">
+                <div class="cross-btn">
+                    <button><i class="fal fa-times"></i></button>
+                </div>
+                <div class="container">
+                    <div class="sg-appoint-form">
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-xxl-12 mb-30">
+                                    <input type="text" name="name" id="name" placeholder="Name">
+                                </div>
+                                <div class="col-xxl-12 mb-30">
+                                    <input type="email" name="email" id="email" placeholder="Email">
+                                </div>
+                                <div class="col-xxl-12 mb-30">
+                                    <input type="text" name="phone" id="phone" placeholder="Phone">
+                                </div>
+                                <div class="col-xxl-12 mb-30">
+                                    <input type="text" name="patiend_id" id="patiend_id" placeholder="Patient ID">
+                                </div>
+                                <div class="col-xxl-12 mb-30">
+                                    <div class="text-center"><button type="submit" class="sg-header-theme-btn-2">Go Online Live</button></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           <div class="popup-area">
+               <div class="sg-sidebar-menu-popup-1">
+                   <div class="sg-sidebar-menu-cross mb-40">
+                       <button>
+                           <i class="fal fa-times"></i>
+                           <span>CLOSE</span>
+                       </button>
+                   </div>
+                   <div class="sg-sidebar-menu-body-1">
+                       <div class="sg-sidebar-menu-l">
+                           <a href="#"><img src="assets/img/logo/logo-2.png" alt=""></a>
+                       </div>
+                       <div class="mobile-menu"></div>
+                       <hr class="mb-70">
+                       <div class="sg-sidebar-menu-contact-widget mb-50">
+                           <h5 class="title">Contact Us</h5>
+                           <ul>
+                               <li><i class="fal fa-phone"></i> <a href="tel:987-098-098-09">987-098-098-09</a>,   <a href="tel:898-352-003-05">898-352-003-05</a></li>
+                           </ul>
+                           <ul>
+                               <li><i class="fal fa-envelope"></i></i> <a href="mailto:info@example.com">info@example.com</a></li>
+                               <li><i class="fal fa-map-marker-alt"></i> <a href="mailto:info@example.com">Domal Brock, New York, USA</a></li>
+                           </ul>
+                       </div>
+                       <div class="text-center">
+                            <button type="submit" class="sg-header-theme-btn-2">Get Appointment </button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="sg-popup-search-box">
+               <form action="#" class="sg-popup-search-form">
+                   <div class="p-rel">
+                        <input type="text" name="search" id="search">
+                        <button class="search-btn"><i class="fal fa-search"></i></button>
+                   </div>
+               </form>
+           </div>
+           <!-- popup area end -->
        </main>
        <!-- footer area start -->
        <footer class="footer-area sg-footer-1 pt-110 pb-90 sg-footer-has-border">
@@ -877,6 +955,8 @@
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <script src="assets/js/odometer.min.js"></script>
         <script src="assets/js/appear.min.js"></script>
+        <script src="assets/js/datepicker.min.js"></script>
+        <script src="assets/js/select2.min.js"></script>
         <script src="assets/js/cross2.min.js"></script>
         <script src="assets/js/back-to-top.min.js"></script>
         <script src="assets/js/main.js"></script>

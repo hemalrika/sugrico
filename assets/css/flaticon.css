@@ -1,10 +1,10 @@
 @font-face {
     font-family: "flaticon";
-    src: url("../fonts/flaticon.ttf?0394375edac46f1d21c1fa6dec5f473f") format("truetype"),
-url("../fonts/flaticon.woff?0394375edac46f1d21c1fa6dec5f473f") format("woff"),
-url("../fonts/flaticon.woff2?0394375edac46f1d21c1fa6dec5f473f") format("woff2"),
-url("../fonts/flaticon.eot?0394375edac46f1d21c1fa6dec5f473f#iefix") format("embedded-opentype"),
-url("../fonts/flaticon.svg?0394375edac46f1d21c1fa6dec5f473f#flaticon") format("svg");
+    src: url("../fonts/flaticon.ttf?99cbd77be67c6b38d5b615463150c54d") format("truetype"),
+url("../fonts/flaticon.woff?99cbd77be67c6b38d5b615463150c54d") format("woff"),
+url("../fonts/flaticon.woff2?99cbd77be67c6b38d5b615463150c54d") format("woff2"),
+url("../fonts/flaticon.eot?99cbd77be67c6b38d5b615463150c54d#iefix") format("embedded-opentype"),
+url("../fonts/flaticon.svg?99cbd77be67c6b38d5b615463150c54d#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -18,42 +18,60 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-align-left:before {
+.flaticon-cart:before {
     content: "\f101";
 }
-.flaticon-play-button-arrowhead:before {
+.flaticon-play:before {
     content: "\f102";
 }
-.flaticon-shopping-bag:before {
+.flaticon-facebook:before {
     content: "\f103";
 }
-.flaticon-left-arrow:before {
+.flaticon-twitter:before {
     content: "\f104";
 }
-.flaticon-folder:before {
+.flaticon-instagram:before {
     content: "\f105";
 }
-.flaticon-paper-plane:before {
+.flaticon-linkedin:before {
     content: "\f106";
 }
-.flaticon-quote:before {
+.flaticon-rocket-launch:before {
     content: "\f107";
 }
-.flaticon-liposuction:before {
+.flaticon-creative-idea:before {
     content: "\f108";
 }
-.flaticon-lip:before {
+.flaticon-layers:before {
     content: "\f109";
 }
-.flaticon-botox:before {
+.flaticon-monitor:before {
     content: "\f10a";
 }
-.flaticon-breast-reconstruction:before {
+.flaticon-business:before {
     content: "\f10b";
 }
-.flaticon-instagram:before {
+.flaticon-apartment:before {
     content: "\f10c";
 }
-.flaticon-cancel:before {
+.flaticon-paper-plane:before {
     content: "\f10d";
+}
+.flaticon-quote:before {
+    content: "\f10e";
+}
+.flaticon-quotation:before {
+    content: "\f10f";
+}
+.flaticon-user:before {
+    content: "\f110";
+}
+.flaticon-view:before {
+    content: "\f111";
+}
+.flaticon-mail:before {
+    content: "\f112";
+}
+.flaticon-telephone:before {
+    content: "\f113";
 }

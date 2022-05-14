@@ -1,0 +1,23 @@
+{
+  "name": "surgico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemalrika/sugrico.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hemalrika/sugrico/issues"
+  },
+  "homepage": "https://github.com/hemalrika/sugrico#readme",
+  "dependencies": {
+    "@chenfengyuan/datepicker": "^1.0.10",
+    "select2": "^4.1.0-rc.0"
+  }
+}

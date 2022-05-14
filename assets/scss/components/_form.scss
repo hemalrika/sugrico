@@ -2,6 +2,7 @@
 * doctor list style 01
 */
 @use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
 .sg-doctor {
     &-list-filter {
         &-search-1-1 {
@@ -66,5 +67,195 @@
     }
     & .list {
         width: 100%;
+    }
+}
+// blog replay form
+.blog-replay-form {
+    & input, & textarea {
+        font-size: 14px;
+        width: 100%;
+        height: 60px;
+        border-radius: 8px;
+        padding: 0 30px;
+        border: 1px solid var(--clr-bg-gray-14);
+        @include placeholder {
+            font-size: 14px;
+        }
+        &:focus {
+            border-color: var(--clr-theme-primary);
+        }
+    }
+    & textarea {
+        height: 120px;
+        padding-top: 25px;
+    }
+    & button[type="submit"] {
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--clr-common-white);
+        border: 0;
+        height: 60px;
+        padding: 0 40px;
+        border-radius: 12px;
+        background: var(--clr-theme-primary);
+    }
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {border-color: var(--clr-bg-gray-3);height: 50px;}
+
+.select2-container--open .select2-dropdown--below {border-color: var(--clr-bg-gray-3);}
+// appoint form
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: var(--clr-theme-primary);
+}
+.select2-container--default .select2-results__option--selected {
+    background-color: #C4ABAA;
+    color: var(--clr-common-white);
+}
+.sg-alert-danger {
+    & span.select2.select2-container {
+        min-width: 100%;
+    }
+    & .select2-container--default .select2-selection--single {
+        border: 0;
+        background: var(--clr-bg-gray-15);
+        height: 60px;
+        padding: 0 23px;
+        border-radius: 12px;
+    }
+    & .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        border-color: #C4ABAA transparent transparent transparent;
+        display: inline-block;
+        position: static;
+        transform: translateY(13px) translateX(-13px);
+    }
+    & .select2-container .select2-selection--single .select2-selection__rendered {
+        line-height: 60px;
+        font-weight: bold;
+        font-size: 16px;
+        color: var(--clr-theme-primary);
+    }
+}
+.select2-results__option--selectable {
+    transition: all .3s;
+}
+.sg-appoint-form {
+    & .wrap {
+        position: relative;
+        & .icon {
+            position: absolute;
+            right: 1px;
+            top: 13px;
+            padding: 0 20px;
+            background: var(--clr-common-white);
+            & i {
+                font-size: 22px;
+            }
+        }
+    }
+    & input:not(.has-checkbox), & textarea, & .nice-select {
+        height: 60px;
+        width: 100%;
+        border-radius: 12px;
+        background: var(--clr-common-white);
+        border: 1px solid var(--clr-bg-gray-3);
+        font-size: 16px;
+        padding: 0 30px;
+        color: var(--clr-body-text);
+        @include placeholder {
+            font-size: 16px;
+        }
+    }
+    & .nice-select {
+        float: none;
+        & .current {
+            line-height: 60px;
+        }
+        &::after {
+            width: 11px;
+            height: 14px;
+            background: #dbdbdb;
+            transform: rotate(0);
+            border: 0;
+            clip-path: polygon(0 0, 100% 0, 50% 50%);
+            right: 30px;
+        }
+    }
+    & textarea {
+        height: 150px;
+        padding-top: 15px;
+    }
+}
+.has-condition-form {
+    & label {
+        font-size: 16px;
+        padding-left: 30px;
+        position: relative;
+        color: var(--clr-body-text);
+        &::before {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 1px;
+            border: 2px solid var(--clr-body-text);
+        }
+        &::after {
+            position: absolute;
+            font-family: "Font awesome 5 pro";
+            left: 4px;
+            content: "\f00c";
+            top: 2px;
+            font-size: 13px;
+            color: var(--clr-body-text);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s;
+        }
+    }
+    & input {
+        display: none;
+        &:checked {
+            & + label::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+.sg-account {
+    &-form-action-6 {
+        & span {
+            font-size: 16px;
+            @media #{$xs} {
+                margin-right: 0;
+                display: block;
+                margin-bottom: 5px;
+            }
+            & a {
+                font-weight: 500;
+                color: var(--clr-common-black);
+                text-decoration: none;
+                &:hover {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+        & .forgot-password {
+            font-size: 16px;
+            text-decoration: none;
+            &:hover {
+                color: var(--clr-theme-primary);
+            }
+        }
+    }
+    &-title-6 {
+        font-size: 50px;
+        margin-bottom: 50px;
+        @media #{$xs} {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
     }
 }

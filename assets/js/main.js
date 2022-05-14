@@ -3,8 +3,12 @@
 
 // meanmenu
 $('#mobile-menu').meanmenu({
-	meanMenuContainer: '.mobile_menu',
+	meanMenuContainer: '.mobile-menu',
 	meanScreenWidth: "991"
+});
+$('#mobile-menu-2').meanmenu({
+	meanMenuContainer: '.mobile-menu-2',
+	meanScreenWidth: "1199"
 });
 
 $(window).on('scroll', function () {
@@ -375,7 +379,27 @@ $('.odometer').appear(function (e) {
 new WOW().init();
 
 sliderActive();
-
-
-
+// datepicker
+$('[data-toggle="datepicker"]').datepicker();
+// select2
+$('#select-doctor').select2();
+// popup
+$('.video-call-btn, .sg-header-sidebar-action-btn').on('click', function() {
+	$('.sg-video-call-popup, .bg-overlay').addClass('visible');
+});
+$('.cross-btn button, .bg-overlay').on('click', function() {
+	$('.sg-video-call-popup, .bg-overlay').removeClass('visible');
+});
+$('.sg-header-sidebar-action-btn-bar').on('click', function() {
+	$('.sg-sidebar-menu-popup-1, .bg-overlay').addClass('visible');
+})
+$('.bg-overlay, .sg-sidebar-menu-cross button').on('click', function() {
+	$('.sg-sidebar-menu-popup-1, .bg-overlay').removeClass('visible');
+})
+$('.header-search-toogle-btn').on('click', function() {
+	$('.bg-overlay, .sg-popup-search-box').addClass('visible');
+});
+$('.bg-overlay').on('click', function() {
+	$('.sg-popup-search-box').removeClass('visible');
+})
 })(jQuery);

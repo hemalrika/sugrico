@@ -49,7 +49,7 @@ CSS INDEX
 @use './colors' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
+@import '~react-select/dist/react-datetime.css';
  body {
     font-family: $dmsans;
     font-weight: 400;
@@ -335,6 +335,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .pb-32 {
     padding-bottom: 32px;
+}
+.mb-33 {
+    margin-bottom: 33px;
 }
 .portfolio-nav-space-reverce {
     margin-bottom: -15px;
