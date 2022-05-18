@@ -402,4 +402,7 @@ $('.header-search-toogle-btn').on('click', function() {
 $('.bg-overlay').on('click', function() {
 	$('.sg-popup-search-box').removeClass('visible');
 })
+$('.has-cursor').on('click',function() {
+	$(this).closest('.sg-widget-shop-1').find('.sg-shop-widget-toogle').slideToggle(500);
+})
 })(jQuery);

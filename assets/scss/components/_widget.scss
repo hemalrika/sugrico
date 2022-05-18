@@ -361,3 +361,94 @@
         padding-left: 0;
     }
 }
+
+/**
+* Shop widget
+*/
+.sg-widget-shop {
+    &-category-list {
+        & ul {
+            & li {
+                margin-bottom: 9px;
+                overflow: hidden;
+                list-style: none;
+                & .wrap {
+                    display: inline-block;
+                }
+                & input[type="checkbox"] {
+                    display: none;
+                }
+                & label {
+                    font-size: 14px;
+                    color: var(--clr-body-text);
+                    display: inline-block;
+                    transition: all .3s;
+                    padding-left: 28px;
+                    position: relative;
+                    &::before {
+                        width: 13px;
+                        height: 13px;
+                        border-radius: 2px;
+                        background: transparent;
+                        display: inline-block;
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 4px;
+                        border: 1px solid var(--clr-bg-gray-14);
+
+                    }
+                    &::after {
+                        position: absolute;
+                        left: 3.5px;
+                        top: 6px;
+                        transition: all .3s;
+                        opacity: 0;
+                        visibility: hidden;
+                        content: "\f00c";
+                        font-family: "Font awesome 5 pro";
+                        color: var(--clr-common-white);
+                        font-size: 7px;
+                    }
+                }
+                & .num-count {
+                    font-size: 14px;
+                    float: right;
+                }
+                & input:checked + label {
+                    &::before {
+                        background-color: var(--clr-theme-primary);
+                        border-color: transparent;
+                    }
+                    &::after {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                & a {
+                    text-decoration: none;
+                    display: block;
+                    &:hover {
+                        & label, & .num-count {
+                            color: var(--clr-theme-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-title {
+        &-1 {
+            font-size: 16px;
+            &.has-cursor {
+                cursor: pointer;
+            }
+            & i {
+                float: right;
+                color: var(--clr-common-black);
+                font-size: 19px;
+                vertical-align: middle;
+            }
+        }
+    }
+}

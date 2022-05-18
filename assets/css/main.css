@@ -2027,7 +2027,7 @@ i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
 }
 
 /***
-* header style 2
+* header style 02
 */
 .sg-logo-2 {
   padding: 35px 0;
@@ -7143,6 +7143,84 @@ a.sg-header-theme-btn-2:hover, button.sg-header-theme-btn-2:hover {
   .pl-40.sg-conversion-space-5 {
     padding-left: 0;
   }
+}
+
+/**
+* Shop widget
+*/
+.sg-widget-shop-category-list ul li {
+  margin-bottom: 9px;
+  overflow: hidden;
+  list-style: none;
+}
+.sg-widget-shop-category-list ul li .wrap {
+  display: inline-block;
+}
+.sg-widget-shop-category-list ul li input[type=checkbox] {
+  display: none;
+}
+.sg-widget-shop-category-list ul li label {
+  font-size: 14px;
+  color: var(--clr-body-text);
+  display: inline-block;
+  transition: all 0.3s;
+  padding-left: 28px;
+  position: relative;
+}
+.sg-widget-shop-category-list ul li label::before {
+  width: 13px;
+  height: 13px;
+  border-radius: 2px;
+  background: transparent;
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  border: 1px solid var(--clr-bg-gray-14);
+}
+.sg-widget-shop-category-list ul li label::after {
+  position: absolute;
+  left: 3.5px;
+  top: 6px;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  content: "\f00c";
+  font-family: "Font awesome 5 pro";
+  color: var(--clr-common-white);
+  font-size: 7px;
+}
+.sg-widget-shop-category-list ul li .num-count {
+  font-size: 14px;
+  float: right;
+}
+.sg-widget-shop-category-list ul li input:checked + label::before {
+  background-color: var(--clr-theme-primary);
+  border-color: transparent;
+}
+.sg-widget-shop-category-list ul li input:checked + label::after {
+  opacity: 1;
+  visibility: visible;
+}
+.sg-widget-shop-category-list ul li a {
+  text-decoration: none;
+  display: block;
+}
+.sg-widget-shop-category-list ul li a:hover label, .sg-widget-shop-category-list ul li a:hover .num-count {
+  color: var(--clr-theme-primary);
+}
+.sg-widget-shop-title-1 {
+  font-size: 16px;
+}
+.sg-widget-shop-title-1.has-cursor {
+  cursor: pointer;
+}
+.sg-widget-shop-title-1 i {
+  float: right;
+  color: var(--clr-common-black);
+  font-size: 19px;
+  vertical-align: middle;
 }
 
 /**

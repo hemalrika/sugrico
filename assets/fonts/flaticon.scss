@@ -1,0 +1,137 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?8dd10ec2e88d1b31357fd0f8780386ca") format("truetype"),
+url("./flaticon.woff?8dd10ec2e88d1b31357fd0f8780386ca") format("woff"),
+url("./flaticon.woff2?8dd10ec2e88d1b31357fd0f8780386ca") format("woff2"),
+url("./flaticon.eot?8dd10ec2e88d1b31357fd0f8780386ca#iefix") format("embedded-opentype"),
+url("./flaticon.svg?8dd10ec2e88d1b31357fd0f8780386ca#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "align-left": "\f101",
+    "play-button-arrowhead": "\f102",
+    "shopping-bag": "\f103",
+    "left-arrow": "\f104",
+    "folder": "\f105",
+    "paper-plane": "\f106",
+    "quote": "\f107",
+    "liposuction": "\f108",
+    "lip": "\f109",
+    "botox": "\f10a",
+    "breast-reconstruction": "\f10b",
+    "instagram": "\f10c",
+    "cancel": "\f10d",
+    "search": "\f10e",
+    "telephone": "\f10f",
+    "mail": "\f110",
+    "pin": "\f111",
+    "facebook": "\f112",
+    "twitter": "\f113",
+    "instagram-1": "\f114",
+    "linkedin": "\f115",
+    "chat": "\f116",
+    "phone-call": "\f117",
+    "phone-call-1": "\f118",
+    "video-camera": "\f119",
+    "user": "\f11a",
+    "view": "\f11b",
+    "telephone-1": "\f11c",
+);
+
+.flaticon-align-left:before {
+    content: map-get($flaticon-map, "align-left");
+}
+.flaticon-play-button-arrowhead:before {
+    content: map-get($flaticon-map, "play-button-arrowhead");
+}
+.flaticon-shopping-bag:before {
+    content: map-get($flaticon-map, "shopping-bag");
+}
+.flaticon-left-arrow:before {
+    content: map-get($flaticon-map, "left-arrow");
+}
+.flaticon-folder:before {
+    content: map-get($flaticon-map, "folder");
+}
+.flaticon-paper-plane:before {
+    content: map-get($flaticon-map, "paper-plane");
+}
+.flaticon-quote:before {
+    content: map-get($flaticon-map, "quote");
+}
+.flaticon-liposuction:before {
+    content: map-get($flaticon-map, "liposuction");
+}
+.flaticon-lip:before {
+    content: map-get($flaticon-map, "lip");
+}
+.flaticon-botox:before {
+    content: map-get($flaticon-map, "botox");
+}
+.flaticon-breast-reconstruction:before {
+    content: map-get($flaticon-map, "breast-reconstruction");
+}
+.flaticon-instagram:before {
+    content: map-get($flaticon-map, "instagram");
+}
+.flaticon-cancel:before {
+    content: map-get($flaticon-map, "cancel");
+}
+.flaticon-search:before {
+    content: map-get($flaticon-map, "search");
+}
+.flaticon-telephone:before {
+    content: map-get($flaticon-map, "telephone");
+}
+.flaticon-mail:before {
+    content: map-get($flaticon-map, "mail");
+}
+.flaticon-pin:before {
+    content: map-get($flaticon-map, "pin");
+}
+.flaticon-facebook:before {
+    content: map-get($flaticon-map, "facebook");
+}
+.flaticon-twitter:before {
+    content: map-get($flaticon-map, "twitter");
+}
+.flaticon-instagram-1:before {
+    content: map-get($flaticon-map, "instagram-1");
+}
+.flaticon-linkedin:before {
+    content: map-get($flaticon-map, "linkedin");
+}
+.flaticon-chat:before {
+    content: map-get($flaticon-map, "chat");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon-map, "phone-call");
+}
+.flaticon-phone-call-1:before {
+    content: map-get($flaticon-map, "phone-call-1");
+}
+.flaticon-video-camera:before {
+    content: map-get($flaticon-map, "video-camera");
+}
+.flaticon-user:before {
+    content: map-get($flaticon-map, "user");
+}
+.flaticon-view:before {
+    content: map-get($flaticon-map, "view");
+}
+.flaticon-telephone-1:before {
+    content: map-get($flaticon-map, "telephone-1");
+}
