@@ -140,13 +140,16 @@
                             display: block;
                             margin: 0px;
                             padding: 0 21px;
+                            &:not(:last-child) {
+                                margin-bottom: 7px;
+                            }
                             & a {
                                 padding: 0px;
                                 display: inline-block;
                                 text-transform: capitalize;
-                                font-weight: 500;
+                                font-weight: 400;
                                 position: relative;
-                                font-size: 14px;
+                                font-size: 16px;
                             }
                         }
                     }
@@ -200,6 +203,9 @@
                     margin-left: 37px;
                     @media #{$xs} {
                         margin-left: 25px;
+                    }
+                    @media #{$md} {
+                        margin-left: 15px;
                     }
                     &::after {
                         position: absolute;
@@ -305,6 +311,9 @@
                             display: block;
                             margin: 0px;
                             padding: 0 21px;
+                            &:not(:last-child) {
+                                margin-bottom: 7px;
+                            }
                             & a {
                                 padding: 0px;
                                 display: inline-block;
@@ -545,4 +554,16 @@ a.sg-header, button.sg-header {
     @media #{$md} {
         text-align: center;
     }
+}
+
+// meanmenu
+.mean-container .mean-nav ul li li a {
+	font-size: 20px;
+	padding: 0px 0;
+	margin-bottom: 5px;
+}
+.mean-container .mean-nav > ul > li > .submenu {
+	overflow: hidden;
+	padding-bottom: 10px;
+    padding-left: 15px;
 }

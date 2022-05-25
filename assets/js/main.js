@@ -223,7 +223,7 @@ $('.popup-video').magnificPopup({
 });
 $('.has-nice-select').niceSelect();
 // data background
-$("[data-background").each(function(){
+$("[data-background]").each(function(){
 	$(this).css("background-image","url("+$(this).attr("data-background") + ") ")
 })
 // data width
@@ -262,6 +262,7 @@ var testimonialControl = new Swiper(".sg-testimonial-active-control", {
 	autoplay: true,
 	watchSlidesProgress: true,
 });
+
 var testimonialControlMain = new Swiper(".sg-testimonial-active-main", {
 	loop: true,
 	spaceBetween: 0,
@@ -305,6 +306,46 @@ const testimonialActiveTwo = new Swiper(".sg-testimonial-active-2", {
 	}
 });
 // product active 2 
+var singleProductPopupImg = new Swiper(".sg-single-product-popup-active", {
+	loop: true,
+	spaceBetween: 0,
+	slidesPerView: 1,
+	freeMode: true,
+	autoplay: true,
+	watchSlidesProgress: true,
+});
+var singleProductPopupControl = new Swiper(".sg-single-product-popup-control-active", {
+	loop: true,
+	spaceBetween: 20,
+	slidesPerView: 3,
+	freeMode: true,
+	autoplay: true,
+	watchSlidesProgress: true,
+	thumbs: {
+		swiper: singleProductPopupImg,
+	}
+});
+
+// product active 3
+var singleProductPopupImgThree = new Swiper(".sg-single-product-popup-active-2", {
+	loop: true,
+	spaceBetween: 0,
+	slidesPerView: 1,
+	freeMode: true,
+	autoplay: true,
+	watchSlidesProgress: true,
+});
+var singleProductPopupControlThree = new Swiper(".sg-single-product-popup-control-active-2", {
+	loop: true,
+	spaceBetween: 20,
+	slidesPerView: 3,
+	freeMode: true,
+	autoplay: true,
+	watchSlidesProgress: true,
+	thumbs: {
+		swiper: singleProductPopupImgThree,
+	}
+});
 const productActiveTwo = new Swiper(".sg-product-active-2", {
 	slidesPerView: 4,
 	spaceBetween: 30,
@@ -360,6 +401,79 @@ const instagramActiveTwo = new Swiper(".instagram-active-2", {
 		}
 	}
 });
+// related product 
+const relatedProduct = new Swiper(".sg-shop-details-related-product-active", {
+	slidesPerView: 4,
+	spaceBetween: 30,
+	loop: true,
+	centeredSlides: false,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		576: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 3,
+		},
+		1199: {
+			slidesPerView: 4
+		}
+	}
+});
+// recent product 
+const recentProduct = new Swiper(".sg-shop-details-recent-product-active", {
+	slidesPerView: 4,
+	spaceBetween: 30,
+	loop: true,
+	centeredSlides: false,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		576: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 3,
+		},
+		1199: {
+			slidesPerView: 4
+		}
+	}
+});
+
+// search popup
+const searchPopup = new Swiper(".sg-popup-search-result-product-active", {
+	slidesPerView: 6,
+	spaceBetween: 30,
+	loop: true,
+	centeredSlides: false,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		576: {
+			slidesPerView: 2,
+		},
+		768: {
+			slidesPerView: 3,
+		},
+		992: {
+			slidesPerView: 4,
+		},
+		1199: {
+			slidesPerView: 6
+		}
+	}
+});
 // cross 2
 $('.cross2').cross2({
 	titlesEnabled: false,
@@ -382,7 +496,7 @@ sliderActive();
 // datepicker
 $('[data-toggle="datepicker"]').datepicker();
 // select2
-$('#select-doctor').select2();
+$('#select-doctor, .sg-has-select-2').select2();
 // popup
 $('.video-call-btn, .sg-header-sidebar-action-btn').on('click', function() {
 	$('.sg-video-call-popup, .bg-overlay').addClass('visible');
@@ -399,10 +513,78 @@ $('.bg-overlay, .sg-sidebar-menu-cross button').on('click', function() {
 $('.header-search-toogle-btn').on('click', function() {
 	$('.bg-overlay, .sg-popup-search-box').addClass('visible');
 });
-$('.bg-overlay').on('click', function() {
+$('.bg-overlay, .sg-popup-search-box-close-action-btn').on('click', function() {
 	$('.sg-popup-search-box').removeClass('visible');
+	$('.bg-overlay').removeClass('visible');
 })
 $('.has-cursor').on('click',function() {
 	$(this).closest('.sg-widget-shop-1').find('.sg-shop-widget-toogle').slideToggle(500);
+})
+// range slider activation
+$(".slider-range-bar").slider({
+	range: true,
+	min: 0,
+	max: 500,
+	values: [75, 300],
+	slide: function (event, ui) {
+		$(".amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+	},
+});
+// product quantity
+var productQuantity = 1;
+// quantity form 1
+$('.sg-single-product-popup-quantity-box .plus').on('click', function () {
+	var selectedInput = $(this).closest('.sg-single-product-popup-quantity-box').find('input');
+	productQuantity += 1;
+	selectedInput.attr('value', productQuantity);
+});
+$('.sg-single-product-popup-quantity-box .minus').on('click', function () {
+	var selectedInput = $(this).closest('.sg-single-product-popup-quantity-box').find('input');
+	productQuantity-=1;
+	if(productQuantity < 1) {
+		productQuantity = 1;
+	}
+	selectedInput.attr('value', productQuantity);
+});
+// quantity form 2
+$('.sg-shopping-cart-popup-quantity-form .plus-btn').on('click', function () {
+	var selectedInput = $(this).closest('.sg-shopping-cart-popup-quantity-form').find('input');
+	productQuantity += 1;
+	selectedInput.attr('value', productQuantity);
+});
+$('.sg-shopping-cart-popup-quantity-form .minus-btn').on('click', function () {
+	var selectedInput = $(this).closest('.sg-shopping-cart-popup-quantity-form').find('input');
+	productQuantity-=1;
+	if(productQuantity < 1) {
+		productQuantity = 1;
+	}
+	selectedInput.attr('value', productQuantity);
+});
+
+
+
+// product view popup
+$('.eye-popup-product, .bg-overlay').on('click', function() {
+	$('.sg-single-product-popup').addClass('visible');
+	$('.bg-overlay').addClass('visible');
+});
+$('.sg-single-product-popup-close-action, .bg-overlay').on('click', function() {
+	$('.sg-single-product-popup').removeClass('visible');
+	$('.bg-overlay').removeClass('visible');
+});
+// star rating
+$(".sg-star-rating").starRating({
+	initialRating: 4,
+	strokeColor: '#FFCD00',
+	strokeWidth: 10,
+	starSize: 16.46
+  });
+  $('.has-cart-popup').on('click', function() {
+	  $('.sg-shopping-cart-popup').addClass('visible');
+	  $('.bg-overlay').addClass('visible');
+  })
+  $('.sg-shopping-cart-popup-close-btn, .bg-overlay').on('click', function() {
+	$('.sg-shopping-cart-popup').removeClass('visible');
+	$('.bg-overlay').removeClass('visible');
 })
 })(jQuery);

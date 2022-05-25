@@ -259,3 +259,101 @@
         }
     }
 }
+
+
+// default form
+.sg-submit-form-default {
+    &-single {
+        &-btn {
+            height: 45px;
+            border-radius: 5px;
+            background: transparent;
+            border: 1px solid #9a4441;
+            padding: 0 48px;
+            font-size: 16px;
+            color: var(--clr-theme-primary);
+            font-weight: 500;
+            &:hover {
+                background-color: var(--clr-theme-primary);
+                border-color: transparent;
+                color: var(--clr-common-white);
+            }
+        }
+        & .condition-box {
+            & input:checked + label::after {
+                border-color: var(--clr-theme-primary);
+            }
+            & input:checked + label::before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        & label {
+            font-size: 14px;
+            color: var(--clr-common-black);
+            display: block;
+            margin-bottom: 12px;
+            &.condition {
+                font-size: 12px;
+                color: var(--clr-body-text);
+                display: block;
+                padding-left: 25px;
+                position: relative;
+                &.condition-2 {
+                    font-size: 14px;
+                }
+                &::after {
+                    position: absolute;
+                    left: 0;
+                    top: 3px;
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 2px;
+                    display: inline-block;
+                    transition: all .3s;
+                    content: "";
+                    border: 1px solid var(--clr-bg-gray-3);
+                }
+                &::before {
+                    position: absolute;
+                    left: 2px;
+                    top: 2px;
+                    transition: all .3s;
+                    font-family: "Font awesome 5 pro";
+                    color: var(--clr-theme-primary);
+                    content: "\f00c";
+                    opacity: 0;
+                    visibility: hidden;
+                    font-size: 10px;
+                }
+            }
+        }
+        & textarea {
+            border-radius: 5px;
+            border: 1px solid var(--clr-bg-gray-3);
+            height: 136px;
+            width: 100%;
+            color: var(--clr-body-text);
+            padding: 10px;
+            &:focus {
+                border-color: var(--clr-theme-primary);
+            }
+        }
+        & input[type="text"], & input[type="email"], & input[type="number"] {
+            width: 100%;
+            height: 45px;
+            border-radius: 5px;
+            padding: 0 20px;
+            color: var(--clr-body-text);
+            border: 1px solid var(--clr-bg-gray-3);
+            &:focus {
+                border-color: var(--clr-theme-primary);
+            }
+        }
+        & input {
+            &.has-condition {
+                display: none;
+            }
+        }
+    }
+}

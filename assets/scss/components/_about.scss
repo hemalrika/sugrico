@@ -292,8 +292,13 @@
 .sg-about-successfully-solved-box-3 {
     padding-left: 11px;
     position: relative;
-    @media #{$lg} {
+    @media #{$lg, $md, $sm} {
         padding-left: 0;
+        overflow: hidden;
+        display: table;
+        &::before {
+            display: none;
+        }
     }
     &::before {
         position: absolute;

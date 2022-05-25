@@ -31,6 +31,9 @@
                 content: "";
                 background-color: var(--clr-theme-primary);
                 width: 42.5%;
+                @media #{$xxxl} {
+                    display: none;
+                }
                 @media #{$xl} {
                     right: 0;
                     border-top-right-radius: 25px;
